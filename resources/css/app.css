@@ -1,8 +1,8 @@
 body{
     margin: 0;
+    font-family: Montserrat, sans-serif;
 }
 #header_wrapper{
-    font-family: Montserrat, sans-serif;
     letter-spacing: 2px;
 
      height: 75px;
@@ -57,7 +57,6 @@ body{
     background-position: center;
 }
 
-
 #featured_offer_bottom{
     text-align: center;
     background: rgb(255,255,255);
@@ -69,10 +68,130 @@ body{
     display: table;
     width: 100%;
 }
+
 #featured_offer_bottom h1{
     width: 100%;
     margin-top: 0 auto;
     display: table-cell;
     vertical-align: middle;
     font-size: 75px;
+    font-family: Montserrat SemiBold, sans-serif;
 }
+
+#most_popular_showcase_wrapper{
+    display: grid;
+    width: 95vw;
+    margin: 0 auto;
+    grid-column-gap: 1vw;
+    grid-template-columns: 23vw 23vw 23vw 23vw;
+}
+
+#most_popular_showcase_wrapper h1{
+    grid-row: 1;
+    grid-column: 2/4;
+    margin: 0 auto;
+    margin-top: 50px;
+    font-family: Montserrat ExtraLight, sans-serif;
+    letter-spacing: 4px;
+}
+#most_popular_showcase_wrapper h2{
+    grid-row: 2;
+    grid-column: 2/4;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    font-family: Montserrat Light, sans-serif;
+    letter-spacing: 2px;
+}
+
+#most_popular_item_1{
+    grid-column: 1/2;
+    grid-row: 3;
+    background-image: url('../../images/most_popular_showcase/item_1.png');
+}
+#most_popular_item_2{
+    grid-column: 2/3;
+    grid-row: 3;
+    background-image: url('../../images/most_popular_showcase/item_2.png');
+}
+#most_popular_item_3{
+    grid-column: 3/4;
+    grid-row: 3;
+    background-image: url('../../images/most_popular_showcase/item_3.png');
+}
+#most_popular_item_4{
+    grid-column: 4/5;
+    grid-row: 3;
+    background-image: url('../../images/most_popular_showcase/item_4.png');
+}
+
+.most_popular_items{
+    display: inline-block;
+    width: 100%;
+    height: 275px;
+    background-size: cover;
+    background-position: center center;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.most_popular_items_cover{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .5);
+    margin-top: -35px;
+    opacity: 0;
+    transition: .3s;
+}
+
+.most_popular_items .most_popular_items_cover:hover{
+
+     opacity: 1;
+}
+
+.most_popular_items_cover h3{
+    font-size: 35px;
+
+    position: relative;
+    top: 100px;
+    text-align: center;
+}
+
+.most_popular_items_cover p{
+    font-size: 27.5px;
+
+    margin-top: 100px;
+    text-align: center;
+}
+
+#testdiv{
+    height: 100vh;
+    width: 100vw;
+}
+
+#view_all_products_button{
+    width: 10vw;
+    position: relative;
+    left: 50%;
+    margin-left: -5vw;
+    margin-top: 50px;
+}
+
+div[class*=box] {
+    height: 33.33%;
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .box-1 { background-color: #FF6766; }
+  .box-2 { background-color: #3C3C3C; }
+  .box-3 { background-color: #66A182; }
+  
+  .btn {
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+    width: 250px;
+    cursor: pointer;
+  }

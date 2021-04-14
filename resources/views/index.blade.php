@@ -31,12 +31,32 @@
     </div>
     <div id='most_popular_showcase_wrapper'>
         <h1>FEATURING</h1>
-        <h2>most popular items</h2>
-        <div id='item1'> </div>
-        <div id='item2'> </div>
-        <div id='item3'> </div>
-        <div id='item4'> </div>
+        <h2>Most popular items:</h2>
+        <div id='most_popular_item_1' class='most_popular_items'><div class='most_popular_items_cover'>
+            <h3>"cool train!"</h3>
+            <p>'subtext'</p>
+        </div></div>
+        <div id='most_popular_item_2' class='most_popular_items'><div class='most_popular_items_cover'>
+            <h3>"cool train!"</h3>
+            <p>'subtext'</p>
+        </div></div>
+        <div id='most_popular_item_3' class='most_popular_items'><div class='most_popular_items_cover'>
+            <h3>"cool train!"</h3>
+            <p>'subtext'</p>
+        </div></div>
+        <div id='most_popular_item_4' class='most_popular_items'><div class='most_popular_items_cover'>
+            <h3>"cool train!"</h3>
+            <p>'subtext'</p>
+        </div></div>
     </div>
-    
+    <button id='view_all_products_button' onclick="alert('This part hasn\'t been coded in yet')">VIEW ALL PRODUCTS</button>
+
+    <div class='btn btn-one' id='view_all_products_button'>
+        <span>HOVER ME</span>
+</div>
+
+
+
+    <div id='testdiv'> </div>    
 </body>
 </html>

@@ -20,13 +20,14 @@
         </div>
             
         <div id='head_wrapper_right'>
+            <a onclick='switchTheme()' class="btn2 effect04" id='themeSwitchButton' data-sm-link-text="Lightmodemode" target="_blank"><span>Mode</span></a>
             <a>cart (0)</a>
             <a>account</a>
         </div>
     </div>
     <div id='featured_offer_parent'>
         <div id='featured_offer_bottom'>
-            <h1>Featured offer: SGM(m)</h1>
+            <h1>Featured offer: ICM(m)</h1>
         </div>
     </div>
     <div id='most_popular_showcase_wrapper'>
@@ -117,15 +118,28 @@
         <h2>BESTE TEAM OOIT</h2>
         <div id='staff_img_wrapper'>
             <div class='staff_members' id='staff_member_1'></div>
+            <h3 id='staff_name_1'>Ester</h3>
             <div class='staff_members' id='staff_member_2'></div>
+            <h3 id='staff_name_2'>Chandler</h3>
             <div class='staff_members' id='staff_member_3'></div>
+            <h3 id='staff_name_3'>Michiel</h3>
             <div class='staff_members' id='staff_member_4'></div>
+            <h3 id='staff_name_4'>Duncan</h3>
             <div class='staff_members' id='staff_member_5'></div>
+            <h3 id='staff_name_5'>Sonic</h3>
         </div>
     </div>
 
 
 
+
+
+        <div class="container">
+            
+        </div>
+
     <div id='testdiv'> </div>    
+
+    <script src='../resources/js/ThemeSwitch.js'></script>
 </body>
 </html>

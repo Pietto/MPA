@@ -1,6 +1,7 @@
 body{
     margin: 0;
     font-family: Montserrat, sans-serif;
+    overflow-x: hidden;
 }
 #header_wrapper{
     letter-spacing: 2px;
@@ -144,8 +145,7 @@ body{
 }
 
 .most_popular_items .most_popular_items_cover:hover{
-
-     opacity: 1;
+    opacity: 1;
 }
 
 .most_popular_items_cover h3{
@@ -168,30 +168,393 @@ body{
     width: 100vw;
 }
 
-#view_all_products_button{
-    width: 10vw;
+.animated_buttons{
+    font-family: Montserrat SemiBold, sans-serif;
+    font-size: 30px;
+    width: 500px;
+    height: 50px;
     position: relative;
     left: 50%;
-    margin-left: -5vw;
+    margin-left: -200px;
     margin-top: 50px;
 }
 
+
+#popular_categories_wrapper{
+    margin: 35px;
+    margin-top: 250px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.popular_categories{
+    grid-row: 1;
+    width: 100%;
+    height: 365.75px;
+}
+
+.popular_categories >  .popular_items_cover{
+    background-color: rgba(0,0,0,.7);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    margin-top: -50px;
+    color: white;
+    transition: .2s ease-in-out;
+}
+
+.popular_categories h1, .popular_categories p{
+    margin: 0;
+    position: relative;
+    top: 30px;
+    left: 40px;
+    width: 400px;
+}
+.popular_categories p{
+    top: 45px;
+    opacity: 1;
+}
+
+#popular_category_1{
+    grid-column: 1/2;
+    background-image: url('../../images/popular_categories_showcase/EMU.png');
+    background-size: contain;
+}
+#popular_category_2{
+    grid-column: 2/3;
+    background-image: url('../../images/popular_categories_showcase/klassieker.png');
+    background-size: contain;
+}
+#popular_category_3{
+    grid-column: 3/4;
+    background-image: url('../../images/popular_categories_showcase/international.png');
+    background-size: contain;
+}
+
+#view_all_emus_button, #view_all_classics_button, #view_all_internationals_button{
+    font-family: Montserrat SemiBold, sans-serif;
+    font-size: 30px;
+    width: 250px;
+    top: 55%;
+    margin-left: -125px;
+    z-index: 99;
+}
+
+#view_all_classics_button{
+    width: 400px;
+    margin-left: -200px;
+}
+
+#view_all_internationals_button{
+    width: 450px;
+    margin-left: -225px;
+}
+
+.popular_items_cover{
+    position: relative;
+    top: -50px
+}
+
+#popular_category_1 .popular_items_cover:hover, #popular_category_2 .popular_items_cover:hover, #popular_category_3 .popular_items_cover:hover{
+    opacity: 0;
+    transition: .1s ease-in-out;
+}
+
+
+#info_wrapper{
+    margin: 35px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 550px;
+}
+
+.info_text_wrapper{
+    padding: 150px;
+    grid-row: 1;
+    grid-column: 1/2;
+}
+
+.info_text_wrapper h1{
+    font-family: Montserrat ExtraLight, sans-serif;
+    letter-spacing: 8px;
+    font-size: 15px;
+}
+.info_text_wrapper h2{
+    font-family: Montserrat Light, sans-serif;
+    margin-top: -15px;
+}
+
+.info_img_wrapper{
+    margin: 0;
+    grid-row: 1;
+    grid-column: 2/3;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../images/random/item_21.jpg);
+    background-size: cover;
+    background-repeat: none !important;
+}
+
+#location_img{
+    grid-row: 2;
+    grid-column: 1/2;
+    background-image: url(../../images/random/item_13.jpg);
+}
+#location_text{
+    grid-row: 2;
+    grid-column: 2/3;
+}
+
+#satisfaction_text{
+    grid-row: 3;
+}
+
+#satisfaction_img{
+    grid-row: 3;
+    background-image: url(../../images/random/item_8.jpg);
+}
+
+#staff_wrapper{
+    margin: 0 auto;
+    width: 1200px;
+    padding: 0;
+}
+
+#staff_img_wrapper{
+    display: grid;
+    grid-template-columns: 132.5px 132.5px 132.5px 132.5px 132.5px 132.5px 132.5px 132.5px 132.5px ;
+    grid-template-rows: 450px 400px;
+    grid-gap: 20px;
+}
+
+.staff_members{
+    width: 100%;
+    height: 100%;
+    grid-row: 1;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transition: .1s ease-in-out;
+}
+
+#staff_wrapper h1{
+    text-align: center;
+    font-family: Montserrat BOLD, sans-serif;
+}
+
+#staff_member_1{
+    grid-column: 1/3;
+    background-image: url(../../images/staff/staff_1.png);
+}
+#staff_member_1:hover{
+    background-image: url(../../images/staff/staff_1_alt.png);
+}
+#staff_member_2{
+    grid-column: 3/5;
+    background-image: url(../../images/staff/staff_2.png);
+}
+#staff_member_2:hover{
+    background-image: url(../../images/staff/staff_2_alt.png);
+}
+#staff_member_3{
+    grid-column: 5/7;
+    background-image: url(../../images/staff/staff_3.png);
+}
+#staff_member_3:hover{
+    background-image: url(../../images/staff/staff_3_alt.png);
+}
+#staff_member_4{
+    grid-column: 7/9;
+    background-image: url(../../images/staff/staff_4.png);
+}
+#staff_member_4:hover{
+    background-image: url(../../images/staff/staff_4_alt.png);
+}
+#staff_member_5{
+    grid-row: 2;
+    grid-column: 3/7;
+    background-image: url(../../images/staff/staff_5.png);
+    background-size: cover;
+}
+#staff_member_5:hover{
+    background-image: url(../../images/staff/staff_5_alt.png);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* BUTTON ANIMATION 1 */
+
+
 div[class*=box] {
     height: 33.33%;
-    width: 100%; 
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
-  .box-1 { background-color: #FF6766; }
-  .box-2 { background-color: #3C3C3C; }
-  .box-3 { background-color: #66A182; }
-  
   .btn {
     line-height: 50px;
-    height: 50px;
     text-align: center;
-    width: 250px;
     cursor: pointer;
+  }
+
+  .btn-animation-one {
+    transition: all 0.3s;
+    position: relative;
+  }
+  .btn-animation-one span {
+    transition: all 0.3s;
+  }
+  .btn-animation-one::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgba(255,0,0,0.5);
+    border-bottom-color: rgba(255,0,0,0.5);
+    transform: scale(0.1, 1);
+  }
+  .btn-animation-one:hover span {
+    letter-spacing: 2px;
+  }
+  .btn-animation-one:hover::before {
+    opacity: 1; 
+    transform: scale(1, 1); 
+  }
+  .btn-animation-one::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+    background-color: rgba(0,0,0,0.1);
+  }
+  .btn-animation-one:hover::after {
+    opacity: 0; 
+    transform: scale(0.1, 1);
+  }
+
+
+  /* BUTTON ANIMATION 2 */
+  
+
+  .btn-animation-two {
+    color: #FFF;
+    transition: all 0.5s;
+    position: relative; 
+  }
+  .btn-animation-two span {
+    z-index: 2; 
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+  }
+  .btn-animation-two::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.5s;
+    border: 1px solid rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.1);
+  }
+  .btn-animation-two::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.5s;
+    border: 1px solid rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.1);
+  }
+  .btn-animation-two:hover::before {
+    transform: rotate(-45deg);
+    background-color: rgba(255,255,255,0);
+  }
+  .btn-animation-two:hover::after {
+    transform: rotate(45deg);
+    background-color: rgba(255,255,255,0);
+  }
+
+/* BUTTON ANIMATION 3 */
+
+
+  .btn-animation-three {
+    color: #FFF;
+    transition: all 0.5s;
+    position: relative;
+  }
+  .btn-animation-three::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(255,255,255,0.1);
+    transition: all 0.3s;
+  }
+  .btn-animation-three:hover::before {
+    opacity: 0 ;
+    transform: scale(0.5,0.5);
+  }
+  .btn-animation-three::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border: 1px solid rgba(255,255,255,0.5);
+    transform: scale(1.2,1.2);
+  }
+  .btn-animation-three:hover::after {
+    opacity: 1;
+    transform: scale(1,1);
   }

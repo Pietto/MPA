@@ -1,11 +1,12 @@
 var darkMode = false;
+var popularItemsCover = document.getElementsByClassName("most_popular_items_cover")
 
 function switchTheme(breaking){
     if(breaking == true){
 
     }else{
         if(darkMode == false){
-            document.body.style.backgroundColor = 'black';
+            document.body.style.backgroundColor = 'rgb(20,20,20)';
             document.body.style.color = 'white';
             switchThemeAdvanced('dark');
             darkMode = true;
@@ -28,12 +29,17 @@ function switchTheme(breaking){
 
 function switchThemeAdvanced(mode){
     if(mode == 'dark'){
-        featured_offer_bottom.style.background = 'linear-gradient(0deg, rgba(0,0,0,.9) 50%, rgba(0,0,0,.20) 100%)';
+        featured_offer_bottom.style.background = 'linear-gradient(0deg, rgba(25,25,25,.9) 50%, rgba(25,25,25,.20) 100%)';
         themeSwitchButton.setAttribute('data-sm-link-text', 'Darkmode');
-
+        for(i=0; i<4; i++){
+            popularItemsCover[i].style.backgroundColor = 'rgba(20, 20, 20, .5)';
+        }
     }else if(mode == 'light'){
         featured_offer_bottom.style.background=  'linear-gradient(0deg, rgba(255,255,255,.9) 50%, rgba(255,255,255,.20) 100%)';
         themeSwitchButton.setAttribute('data-sm-link-text', 'Lightmode');
+        for(i=0; i<4; i++){
+            popularItemsCover[i].style.backgroundColor = 'rgba(255, 255, 255, .5)';
+        }
     }else{
         console.log('error: mode "' + mode + '" not recornised');
     }

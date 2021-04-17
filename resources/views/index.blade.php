@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../resources/css/app.css">
+    <link rel="stylesheet" href="../resources/css/animations.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
+    <title>index</title>
 </head>
 <body>
     <div id='header_wrapper'>
@@ -14,18 +15,19 @@
             <a>home</a>
             <a>about</a>
             <a>bundles</a>
-            <a>categories</a>
+            <a href='{{Route("product.all")}}'>categories</a>
         </div>
         <div id='head_wrapper_center'>
             <img id='header_logo' alt='company logo' src='../images/logo/logo_plain.png'/>
         </div>
             
         <div id='head_wrapper_right'>
-            <a onclick='switchTheme()' class="btn2 effect04" id='themeSwitchButton' data-sm-link-text="Lightmode" target="_blank"><span>Mode</span></a>
+            <a onclick='switchTheme()' class="btn2 btn-animation-four" id='themeSwitchButton' data-sm-link-text="Lightmode" target="_blank"><span>Mode</span></a>
             <a>cart (0)</a>
             <a>account</a>
         </div>
     </div>
+
     <div id='featured_offer_parent'>
         <div id='featured_offer_bottom'>
             <h1>Featured offer: ICM(m)</h1>
@@ -154,13 +156,13 @@
                 <div class="hexagon">
                     <i onclick='window.open("https://www.facebook.com/")' class="fab fa-facebook"></i>
                 </div>
-                </div>
-                <div class="hexagon-wrapper">
+            </div>
+            <div class="hexagon-wrapper">
                 <div class="hexagon">
                     <i onclick='window.open("https://twitter.com/?lang=nl")'class="fab fa-twitter"></i>
                 </div>
-                </div>
-                <div class="hexagon-wrapper">
+            </div>
+            <div class="hexagon-wrapper">
                 <div class="hexagon">
                     <i onclick='window.open("https://www.instagram.com/")'class="fab fa-instagram"></i>
                 </div>

@@ -20,3 +20,8 @@ Route::get('/', function () {
 Route::get('/addtocart', function () {
     return view('addtocart');
 });
+
+Route::get('/products/all', [
+    'uses' => 'App\Http\Controllers\CategoryController@GetAllProducts', 
+    'as' => 'product.all'
+]);

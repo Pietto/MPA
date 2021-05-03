@@ -50,12 +50,6 @@
             res = res.replace(' ', '');
             res = res.replace('(m)', 'm');
             document.getElementById(str).style.backgroundImage = 'url(../../images/products/'+ res +'/'+ res +'_1.jpg)';
-            
-            // // z-index not working as intenden:
-            // document.getElementById(str).style.zIndex = i;
-            // var temp = 'p'+[i+1];
-            // console.log(document.getElementById(temp));
-            // document.getElementById(temp).style.zIndex = i;
         }
     </script>
 </body>

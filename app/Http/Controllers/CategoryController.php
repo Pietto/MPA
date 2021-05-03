@@ -19,13 +19,14 @@ class CategoryController Extends Controller
     }
 
     public function GetOneCategory($id){
-        $category = category::where('id', $id)->get();
-        $product = product::where('id', $id)->get();
-        $ProductCategory = ProductCategory::where('category_ID', $id)->get();
+        $categories = category::where('id', $id)->get();
+        $product_ID = ProductCategory::where('category_ID', $id)->pluck('product_ID');
+        $products = product::whereIn('id', $product_ID)->get();
+
 
         return view('category', [
-            'category' => $category,
-            'product' => $product
+            'category' => $categories,
+            'products' => $products
         ]);
     }
 }

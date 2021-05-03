@@ -50,7 +50,7 @@ class ProductCategoryTableSeeder extends Seeder
                 'category_ID' => 6
             ],[
                 'product_ID' => 4,
-                'category_ID' => 7
+                'category_ID' => 8
             ],[
                 'product_ID' => 5,
                 'category_ID' => 1
@@ -69,6 +69,9 @@ class ProductCategoryTableSeeder extends Seeder
             ],[
                 'product_ID' => 6,
                 'category_ID' => 8
+            ],[
+                'product_ID' => 6,
+                'category_ID' => 9
             ],[
                 'product_ID' => 7,
                 'category_ID' => 4
@@ -156,9 +159,6 @@ class ProductCategoryTableSeeder extends Seeder
             ],[
                 'product_ID' => 15,
                 'category_ID' => 6
-            ],[
-                'product_ID' => 15,
-                'category_ID' => 7
             ],[
                 'product_ID' => 15,
                 'category_ID' => 8

@@ -51,10 +51,12 @@
                 // console.log([products_cat_1]);
             </script> -->
             <? foreach($categories as $category){ ?>
-                <div id='category_div_{{$category->id}}' class='products_categories_category' style="background-image: url('../../images/categories/{{$category->name}}_1.jpg');">
-                    <h1>{{$category->name}}</h1>
-                    <a href='{{Route("category.one", ["id" => $category->id])}}'><p>{{$category->description}}</p></a>
-                </div>
+                <a href='{{Route("category.one", ["id" => $category->id])}}'>
+                    <div id='category_div_{{$category->id}}' class='products_categories_category' style="background-image: url('../../images/categories/{{$category->name}}_1.jpg');">
+                        <h1>{{$category->name}}</h1>
+                        <p>{{$category->description}}</p>
+                    </div>
+                </a>
             <? } ?>
         </div>
     </div>

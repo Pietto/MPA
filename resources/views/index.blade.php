@@ -81,10 +81,11 @@
 
     <div id='popular_categories_wrapper'>
         <div class='popular_categories' id='popular_category_1'>
-            <div class='btn btn-animation-three animated_buttons' id='view_all_emus_button' onclick="alert('This part hasn\'t been coded in yet')">
+        <a href='{{Route("category.one", ["id" => 4])}}'>
+            <div class='btn btn-animation-three animated_buttons' id='view_all_emus_button'>
                 <span>bekijk emu's</span>
             </div>
-
+        </a>
             <div class='popular_items_cover'>
                 <h1>Electric Multiple Units</h1>
                 <p>Efficiënt en gemakkelijk in gebruik, dit type trein is zeer populair, en met goede rede.</p>
@@ -92,10 +93,11 @@
         </div>
 
         <div class='popular_categories' id='popular_category_2'>
-            <div class='btn btn-animation-three animated_buttons' id='view_all_classics_button' onclick="alert('This part hasn\'t been coded in yet')">
+        <a href='{{Route("category.one", ["id" => 11])}}'>
+            <div class='btn btn-animation-three animated_buttons' id='view_all_classics_button'>
                 <span>bekijk de klassiekers!</span>
             </div>
-
+        </a>
             <div class='popular_items_cover'>
                 <h1>Klassiekers</h1>
                 <p>Dit zijn de klassiekers van het Nederlandse spoor! ze hebben hun dienstjaren erop zitten, maar ze hebben hun betrouwbaarheid bewezen in hun dienstjaren.</p>
@@ -103,10 +105,11 @@
         </div>
 
         <div class='popular_categories' id='popular_category_3'>
-            <div class='btn btn-animation-three animated_buttons' id='view_all_internationals_button' onclick="alert('This part hasn\'t been coded in yet')">
+        <a href='{{Route("category.one", ["id" => 9])}}'>
+            <div class='btn btn-animation-three animated_buttons' id='view_all_internationals_button'>
                 <span>bekijk de internationals!</span>
             </div>
-
+        </a>
             <div class='popular_items_cover'>
                 <h1>Internationaal</h1>
                 <p>Dit zijn de treinen die ook over de grens kunnen rijden, zonder functionaliteit of betrouwbaarheid op te hoeven offeren.</p>

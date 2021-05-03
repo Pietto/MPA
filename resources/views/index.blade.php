@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="../resources/css/app.css">
     <link rel="stylesheet" href="../resources/css/animations.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>index</title>
+    <title>Train Shop</title>
 </head>
 <body>
+    
     <div id='header_wrapper'>
         <div id='head_wrapper_left'>
             <a href='/jaar%202/Laravel/project_A/MPA/public/'>home</a>

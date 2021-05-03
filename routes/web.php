@@ -40,3 +40,13 @@ Route::get('/product/{id}', [
     'uses' => 'App\Http\Controllers\ProductController@GetOneProduct', 
     'as' => 'product.one'
 ]);
+
+Route::get('/cart', [
+    'uses' => 'App\Http\Controllers\CartController@index', 
+    'as' => 'product.shoppingCart'
+]);
+
+Route::get('/addtoCart/{id}', [
+    'uses' => 'App\Http\Controllers\CartController@store', 
+    'as' => 'product.addToCart'
+]);

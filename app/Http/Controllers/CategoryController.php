@@ -11,7 +11,7 @@ use App\Models\ProductCategory;
 class CategoryController Extends Controller
 {
     public function GetAllCategories(){
-        $categories = category::get();
+        $categories = Category::get();
 
         return view('categories', [
             'categories' => $categories
@@ -19,7 +19,7 @@ class CategoryController Extends Controller
     }
 
     public function GetOneCategory($id){
-        $categories = category::where('id', $id)->get();
+        $categories = Category::where('id', $id)->get();
         $product_ID = ProductCategory::where('category_ID', $id)->pluck('product_ID');
         $products = product::whereIn('id', $product_ID)->get();
 

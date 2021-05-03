@@ -50,9 +50,10 @@ function switchTheme(breaking){
 
 function switchThemeAdvanced(mode){
     if(mode == 'dark'){
-        if(document.title == 'index'){
+        if(document.title == 'Train Shop'){
             featured_offer_bottom.style.background = 'linear-gradient(0deg, rgba(25,25,25,.9) 50%, rgba(25,25,25,.20) 100%)';
             themeSwitchButton.setAttribute('data-sm-link-text', 'Darkmode');
+            featured_offer_bottom.style.color = 'white';
             for(i=0; i<4; i++){
                 document.getElementsByClassName("most_popular_items_cover")[i].style.backgroundColor = 'rgba(20, 20, 20, .5)';
             }
@@ -60,8 +61,8 @@ function switchThemeAdvanced(mode){
             console.log('no extra darkmode switches')
         }
     }else if(mode == 'light'){
-        if(document.title == 'index'){
-            featured_offer_bottom.style.background=  'linear-gradient(0deg, rgba(255,255,255,.9) 50%, rgba(255,255,255,.20) 100%)';
+        if(document.title == 'Train Shop'){
+            featured_offer_bottom.style.background = 'linear-gradient(0deg, rgba(255,255,255,.9) 50%, rgba(255,255,255,.20) 100%)';
             themeSwitchButton.setAttribute('data-sm-link-text', 'Lightmode');
             for(i=0; i<4; i++){
                 document.getElementsByClassName("most_popular_items_cover")[i].style.backgroundColor = 'rgba(255, 255, 255, .5)';

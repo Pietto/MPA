@@ -56,6 +56,8 @@
             <a>account</a>
         </div>
     </div>
+    
+    <i class="fas fa-arrow-circle-left" id='back_to_products_button' onclick='window.history.back();'></i>
 
     <div class="w3-content w3-display-container" style="max-width:70vw">
         <h1 id='product_name'>{{$product[0]->name}} ({{$product[0]->fullname}})</h1>
@@ -101,4 +103,4 @@
     <? include '../resources/views/include/general/footer.php'; ?>
     <script src='../../resources/js/ThemeSwitch.js'></script>
     <script src='../../resources/js/SlideLogic.js'></script>
-</html>+
+</html>

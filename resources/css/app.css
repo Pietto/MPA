@@ -239,7 +239,7 @@ a{
     background-size: contain;
 }
 
-.popular_categories >  .popular_items_cover{
+.popular_items_cover{
     background-color: rgba(0,0,0,.7);
     width: 100%;
     height: 100%;

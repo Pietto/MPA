@@ -12,15 +12,15 @@
 <body>
     <div id='header_wrapper'>
         <div id='head_wrapper_left'>
-            <a>home</a>
+            <a href='/jaar%202/Laravel/project_A/MPA/public/'>home</a>
             <a>about</a>
-            <a>bundles</a>
-            <a>categories</a>
+            <a href='{{Route("product.all")}}'>products</a>
+            <a href='{{Route("category.all")}}'>categories</a>
         </div>
         <div id='head_wrapper_center'>
             <img id='header_logo' alt='company logo' src='../../images/logo/logo_plain.png'/>
         </div>
-
+            
         <div id='head_wrapper_right'>
             <a onclick='switchTheme()' class="btn2 btn-animation-four" id='themeSwitchButton' data-sm-link-text="Lightmode" target="_blank"><span>Mode</span></a>
             <a>cart (0)</a>
@@ -28,71 +28,35 @@
         </div>
     </div>
 
-    <div id='products_categories_showcase'>
-        <div id='products_categories_wrapper'>
-            <!-- <div id='products_cat_1' class='products_categories_category'>
-                <h1>Intercity</h1>
-                <p>bliep bloep deze zijn snel lol</h1>
-            </div> -->
-            <script>
-                var category_names = ['locomotief', 'Multiple_Unit', 'sprinter', 'intercity', 'internationaal', 'rijtuigen', 'multysysteem', 'klassiekers'];
-                var category_desc = ['Losse locomotieven', 'Reizigerstreinen met cabine\'s aan voor- en achterkant', 'Sprintertreinen. Licht, snel en gemakelijke in/uit stap', 'Snelle treinen met hoge capaciteit', 'Deze werkpaarden kunnen ook over de grens toeteren', 'Losse rijtuigen voor een variabele opbouw, zonder comfort op te offeren', 'Deze treinen hebben meerdere beveiligingssystemen, ideaal voor over de grens', 'Deze klassiekers hebben hun betrouwbaarheid al bewezen. Nu op naar hun volgende eigenaar'];
-                const categories_amount = 8;
-                for(i=0; i<categories_amount; i++){
-                    document.write(
-                    "<div id='products_cat_" + [i+1] + "' class='products_categories_category' style='background-image= url(`" + '/MPA/images/categories/Multiple_Unit_1.jpg' + "`)'>" +
-                        "<h1>" + category_names[i] + "</h1>" +
-                        "<p>" + category_desc[i] + "</h1>" +
-                    "</div>"
-                    );
-                }
-                // products_cat_1.style.color = 'blue';
-                // console.log([products_cat_1]);
-            </script>
-        </div>
+    <div id='products_wrapper'>
+        <? foreach($products as $product){ ?>
+            <a href='{{Route("product.one", ["id" => $product->id])}}'><div id='product_{{$product->name}}' class='products_product_wrapper'>
+                <h1>{{$product->name}}</h1>
+                <p id='p{{$product->id}}'>{{$product->description}}</p>
+            </div></a>
+        <? } ?>
     </div>
 
-
-
-    <div id='space_div'></div>
-
-
-
-
-
-    <div id='footer'>
-        <div id='footer_wrapper_1'>
-            <h1>Contact:</h1>
-            <p id='contact_1'>0123456789</p>
-            <p id='contact_2'>Domain@domain.com</p>
-            <p id='contact_3'>Spoorstraat 186, Watergraafsmeer</p>
-            <p id='contact_4'>1744 ns</p>
-
-            <p id='contact_5'>Wil jij ook de hele dag met treinen werken? check onze vacature’s! <a href='https://www.youtube.com/'><span>IkWilWerkenBij@domain.com</span></a><p>
-
-            <h2>Volg ons ook op social media:</h3>
-
-        </div>
-        <div id='footer_wrapper_2'>
-            <div class="hexagon-wrapper">
-                <div class="hexagon">
-                    <i onclick='window.open("https://www.facebook.com/")' class="fab fa-facebook"></i>
-                </div>
-                </div>
-                <div class="hexagon-wrapper">
-                <div class="hexagon">
-                    <i onclick='window.open("https://twitter.com/?lang=nl")'class="fab fa-twitter"></i>
-                </div>
-                </div>
-                <div class="hexagon-wrapper">
-                <div class="hexagon">
-                    <i onclick='window.open("https://www.instagram.com/")'class="fab fa-instagram"></i>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
+    <? include '../resources/views/include/general/footer.php'; ?>
     <script src='../../resources/js/ThemeSwitch.js'></script>
+    <script>
+        var parent = document.getElementById("products_wrapper");
+        var length = parent.getElementsByClassName("products_product_wrapper").length;
+        for(i=0; i<length; i++){
+            var str = document.getElementsByClassName('products_product_wrapper')[i].id;
+            var res = str.replace('product_', '');
+            res = res.replace('\'', '');
+            res = res.replace(' ', '');
+            res = res.replace(' ', '');
+            res = res.replace('(m)', 'm');
+            document.getElementById(str).style.backgroundImage = 'url(../../images/products/'+ res +'/'+ res +'_1.jpg)';
+            
+            // // z-index not working as intenden:
+            // document.getElementById(str).style.zIndex = i;
+            // var temp = 'p'+[i+1];
+            // console.log(document.getElementById(temp));
+            // document.getElementById(temp).style.zIndex = i;
+        }
+    </script>
 </body>
 </html>

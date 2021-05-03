@@ -21,7 +21,22 @@ Route::get('/addtocart', function () {
     return view('addtocart');
 });
 
+Route::get('/category/all', [
+    'uses' => 'App\Http\Controllers\CategoryController@GetAllCategories', 
+    'as' => 'category.all'
+]);
+
+Route::get('/category/{id}', [
+    'uses' => 'App\Http\Controllers\CategoryController@GetOneCategory', 
+    'as' => 'category.one'
+]);
+
 Route::get('/products/all', [
-    'uses' => 'App\Http\Controllers\CategoryController@GetAllProducts', 
+    'uses' => 'App\Http\Controllers\ProductController@GetAllProducts', 
     'as' => 'product.all'
+]);
+
+Route::get('/product/{id}', [
+    'uses' => 'App\Http\Controllers\ProductController@GetOneProduct', 
+    'as' => 'product.one'
 ]);

@@ -1,5 +1,7 @@
+/* for use of fontawesome's awesome logo's */
 @import url("//use.fontawesome.com/releases/v5.15.3/css/all.css");
 
+/* general stuff */
 
 body{
     margin: 0;
@@ -7,10 +9,16 @@ body{
     overflow-x: hidden;
     background-color: #FEF8F8;
 }
+
+/* removes styling from all <a> tags, making them appear as <p> tags */
+
 a{
     list-style-type: none;
     text-decoration: none;
 }
+
+/* all styling for the header */
+
 #header_wrapper{
     letter-spacing: 2px;
 
@@ -25,14 +33,15 @@ a{
     display: table-cell
 }
 
-/* #header_wrapper div{
-    display: inline-block;
-} */
-
 #header_wrapper a{
     height: 100%;
     margin: 0 10px;
     color: white;
+    transition: .4s;
+}
+
+#header_wrapper a:hover{
+    color: yellow;
 }
 
 #head_wrapper_right{
@@ -67,6 +76,8 @@ a{
     vertical-align: middle;
 }
 
+/* styling for the 'featured offer' in index */
+
 #featured_offer_parent{
     height: 825px;
     width: 100vw;
@@ -97,6 +108,19 @@ a{
     vertical-align: middle;
     font-size: 75px;
     font-family: Montserrat SemiBold, sans-serif;
+    transition: .35s;
+}
+
+
+#featured_offer_bottom h1:hover{
+    font-size: 80px;
+    transition: .35s;
+}
+
+/* styling for 4 'most popular items' in index */
+
+.black{
+    color: black;
 }
 
 #most_popular_showcase_wrapper{
@@ -124,6 +148,8 @@ a{
     font-family: Montserrat Light, sans-serif;
     letter-spacing: 2px;
 }
+
+/* unique properties for all 4 items (position and image) */
 
 #most_popular_item_1{
     grid-column: 1/2;
@@ -183,6 +209,8 @@ a{
     text-align: center;
 }
 
+/* general settings for a few buttons */
+
 .animated_buttons{
     font-family: Montserrat SemiBold, sans-serif;
     font-size: 30px;
@@ -194,6 +222,7 @@ a{
     margin-top: 50px;
 }
 
+/* styling for the 'most popular categories' in index */
 
 #popular_categories_wrapper{
     margin: 35px;
@@ -207,6 +236,7 @@ a{
     grid-row: 1;
     width: 100%;
     height: 365.75px;
+    background-size: contain;
 }
 
 .popular_categories >  .popular_items_cover{
@@ -231,21 +261,23 @@ a{
     opacity: 1;
 }
 
+/* unique properties (position and image) */
+
 #popular_category_1{
     grid-column: 1/2;
     background-image: url('../../images/popular_categories_showcase/EMU.png');
-    background-size: contain;
 }
 #popular_category_2{
     grid-column: 2/3;
     background-image: url('../../images/popular_categories_showcase/klassieker.png');
-    background-size: contain;
 }
 #popular_category_3{
     grid-column: 3/4;
     background-image: url('../../images/popular_categories_showcase/international.png');
     background-size: contain;
 }
+
+/* styling for buttons in the 'most popular categories' showcas */
 
 #view_all_emus_button, #view_all_classics_button, #view_all_internationals_button{
     font-family: Montserrat SemiBold, sans-serif;
@@ -276,6 +308,7 @@ a{
     transition: .1s ease-in-out;
 }
 
+/* styling 'about us' in index */
 
 #info_wrapper{
     margin: 35px;
@@ -330,6 +363,8 @@ a{
     background-image: url(../../images/random/item_8.jpg);
 }
 
+/* styling staffmembers in index */
+
 #staff_wrapper{
     margin: 0 auto;
     width: 1200px;
@@ -380,6 +415,9 @@ a{
     font-family: Montserrat extralight, sans-serif;
     letter-spacing: 2px;
 }
+
+/* staffmembers' names position */
+
 .staff_name_1{
    grid-column: 1/3;
 }
@@ -399,6 +437,8 @@ a{
 #hedge_function{
     grid-row: 6 !important;
 }
+
+/* staffmembers position + hover image*/
 
 #staff_member_1{
     grid-column: 1/3;
@@ -438,6 +478,8 @@ a{
     background-image: url(../../images/staff/staff_5_alt.png);
 }
 
+/* styling footer */
+
 #footer{
     background-image: url(../../images/random/item_24.jpg);
     width: 100vw;
@@ -449,6 +491,7 @@ a{
     display: grid;
     background-color: rgba(0,0,0,.5);
     background-blend-mode: darken;
+    z-index: 98;
     
     color: white;
     font-size: 25px;
@@ -467,6 +510,8 @@ a{
 #footer_wrapper_1 h1, #footer_wrapper_1 p{
     margin-left: 150px;
 }
+
+/* position of all footer information */
 
 #footer_wrapper_1 h1{
     grid-row: 1;
@@ -499,6 +544,7 @@ a{
 #contact_5 a:hover{
     color: rgb(229, 190, 3);
 }
+
 #footer_wrapper_1 h2{
     grid-row: 6;
     grid-column: 1/4;
@@ -527,51 +573,209 @@ a{
 
 
 
-/* extended css for products page */
+/* extended css for categories page */
 
-#space_div{
-    width: 100vw;
-    height: 50vh;
-}
+/* styling of the divisions */
+
 #products_categories_showcase{
     width: 100vw;
     padding: 50px 0;
 }
+
 #products_categories_wrapper{
     display: grid;
     justify-content: center;
     grid-template-columns: 20vw 20vw 20vw 20vw;
     grid-gap: 3.33vw;
 }
+
 .products_categories_category{
-    background-image: url('../../images/random/item_1.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    /* background-color: rgba(255,255,255,.01);
-    background-blend-mode: lighten; */
     width: 100%;    
     height: 225px;
     text-align: center;
-    color: white;
     font-family: montserrat EtraBold, sans-serif;
-    font-size: 25px;
-    transition: .35s;
+    font-size: 24px;
     background-color: rgba(0,0,0,.75);
-    transition: .4s ease-in-out;
-    z
+    transition: .42s ease-in-out;
+    background-blend-mode: darken;
 }
+
+/* styling of text within the divisions */
 
 .products_categories_category h1, .products_categories_category p{
     margin: 0;
-    padding-top: 75px;
+    padding-top: 25px;
+    line-height: 85%;
     color: white;
+    transition: .4s;
 }
+
 .products_categories_category p{
     padding-top: 0;
 }
 
+.products_categories_category p{
+    margin-top: 15px;
+}
+
+/* all hover effects */
+
 .products_categories_category:hover{
     cursor: pointer;
-    background-blend-mode: darken;
-} 
+    transition: .2s ease-in-out;
+    margin: -7.5%;
+    width: 115%;
+    height: 115%;
+    background-blend-mode: normal;
+}
+
+.products_categories_category:hover h1, .products_categories_category:hover p{
+    color:rgba(0,0,0,0);
+    transition: .4s;
+}
+
+
+
+
+
+/* extended css for products page */
+
+/* general settings for positions */
+
+#products_wrapper{
+    display: grid;
+    grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+}
+
+.products_product_wrapper{
+    z-index: 1;
+    width: 100%;
+    height: 30vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* styling for text (name's) */
+
+.products_product_wrapper h1{
+    text-align: center;
+    background-color: rgba(0,0,0,.5);
+    color: white;
+    width: 100%;
+    height: 5vh;
+    position: relative;
+    top: 25vh;
+    transition: .4s;
+    margin-top: 0;
+}
+
+/* styling for product descriptions */
+
+.products_product_wrapper p{
+    color: yellow;
+    font-size: 25px;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: .6s;
+    position: relative;
+    top: 25vh;
+}
+
+/* styling for hover properties */
+
+.products_product_wrapper:hover{
+    cursor: pointer;
+}
+
+.products_product_wrapper:hover h1{
+    color: yellow;
+    height: 100%;
+    top: 0;
+    margin-top: 0;
+}
+
+.products_product_wrapper:hover p{
+    visibility: visible;
+    opacity: 1;
+    position: relative;
+    top: -22.5vh;
+}
+
+
+
+
+
+
+/* styling for product page */
+
+
+.mySlides{
+    display: none;
+    width: 70vw;
+    height: 70vh;
+    object-fit: cover;
+}
+
+.w3-left, .w3-right, .w3-badge{
+    cursor: pointer;
+}
+
+.w3-badge{
+    height: 13px;
+    width: 13px;
+    padding: 0;
+}
+
+#product_name{
+    font-family: montserrat, sans-serif;
+    width: 70vw;
+    height: 65px;
+    vertical-align: middle;
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+    background: linear-gradient(0deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,.85) 100%);;
+    position: absolute;
+}
+
+#product_info_wrapper{
+    width: 70vw;
+    margin: 0 auto;
+}
+
+#product_info_subwrapper_1{
+    float: left;
+}
+
+.product_info_subwrapper{
+    width: 50%;
+    margin: 0;
+    display: inline;
+}
+
+#product_price_wrapper{
+    margin-top: 0;
+    width: 70vw;
+    height: 70px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: black;
+    color: white;
+    transition: .35s;
+}
+
+#product_price_wrapper h1{
+    font-family: montserrat bold, sans-serif;
+    font-size: 50px;
+    vertical-align: middle;
+    margin: 0;
+}
+
+#product_price_wrapper:hover h1{
+    color: yellow;
+}

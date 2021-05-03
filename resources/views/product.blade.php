@@ -52,7 +52,7 @@
         </div>
         <div id='head_wrapper_right'>
             <a onclick='switchTheme()' class="btn2 btn-animation-four" id='themeSwitchButton' data-sm-link-text="Lightmode" target="_blank"><span>Mode</span></a>
-            <a>cart (0)</a>
+            <a href='{{Route("product.shoppingCart")}}'>cart (0)</a>
             <a>account</a>
         </div>
     </div>
@@ -75,7 +75,7 @@
         </div>
     </div>
     <div id='product_price_wrapper'>
-        <h1>{{$product[0]->name}}: €{{$product[0]->price}}</h1>
+        <a href='{{Route("product.addToCart", ["id" => $product[0]->id])}}'><h1>{{$product[0]->name}}: €{{$product[0]->price}}</h1></a>
     </div>
 
     <div id='product_info_wrapper'>

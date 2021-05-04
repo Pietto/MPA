@@ -54,7 +54,10 @@ function switchThemeAdvanced(mode){
             featured_offer_bottom.style.background = 'linear-gradient(0deg, rgba(25,25,25,.9) 50%, rgba(25,25,25,.20) 100%)';
             themeSwitchButton.setAttribute('data-sm-link-text', 'Darkmode');
             featured_offer_bottom.style.color = 'white';
+<<<<<<< HEAD
             view_all_products_button.style.color = 'white';
+=======
+>>>>>>> main
             for(i=0; i<4; i++){
                 document.getElementsByClassName("most_popular_items_cover")[i].style.backgroundColor = 'rgba(20, 20, 20, .5)';
             }

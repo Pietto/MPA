@@ -23,21 +23,43 @@
             
         <div id='head_wrapper_right'>
             <a onclick='switchTheme()' class="btn2 btn-animation-four" id='themeSwitchButton' data-sm-link-text="Lightmode" target="_blank"><span>Mode</span></a>
+<<<<<<< HEAD
             <a href='{{Route("product.shoppingCart")}}'>cart (0)</a>
+=======
+            <a>cart (0)</a>
+>>>>>>> main
             <a>account</a>
         </div>
     </div>
 
 
+<<<<<<< HEAD
     <h1 id='category_name'>{{$category[0]->name}}:</h1>
 
     <div id='products_wrapper'>
         @foreach($products as $product)
+=======
+    {{$category[0]->id}}, {{$category[0]->name}}
+    <br>
+    <!-- {{$products[0]->id}}, {{$products[0]->name}} -->
+    <br>
+    
+    <!-- @foreach ($products as $product)
+        {{$product}}<br><br>
+    @endforeach -->
+
+    <div id='products_wrapper'>
+        <? foreach($products as $product){ ?>
+>>>>>>> main
             <a href='{{Route("product.one", ["id" => $product->id])}}'><div id='product_{{$product->name}}' class='products_product_wrapper'>
                 <h1>{{$product->name}}</h1>
                 <p id='p{{$product->id}}'>{{$product->description}}</p>
             </div></a>
+<<<<<<< HEAD
         @endforeach
+=======
+        <? } ?>
+>>>>>>> main
     </div>
 
 

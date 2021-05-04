@@ -25,7 +25,7 @@ class CreateProductsTable extends Migration
             $table->integer('length');
             $table->integer('coaches');
             $table->string('price');
-            $table->string('description');
+            $table->text('description');
             $table->integer('seats');
             $table->string('manufacturer');
             $table->string('fullname');

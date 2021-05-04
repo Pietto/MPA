@@ -79,16 +79,13 @@
     </div>
 
     <div id='product_info_wrapper'>
+        <p>{{$product[0]->description}}</p>
         <div class='product_info_subwrapper' id='product_info_subwrapper_1'>
             <p><b>volledige naam:</b> {{$product[0]->variant}}</p>
             <p><b>afkorting:</b> {{$product[0]->name}}</p>
             <p><b>topsnelheid:</b> {{$product[0]->topspeed}} kmp/h</p>
             <p><b>lengte:</b> {{$product[0]->length}} meter</p>
-<<<<<<< HEAD
             <p><b>bakken:</b> {{$product[0]->coaches}} <? if($product[0]->coaches == 1){echo 'bak';}else if($product[0]->coaches == 0){echo 'n.v.t.';}else{echo 'bakken';} ?></p>
-=======
-            <p><b>bakken:</b> {{$product[0]->coaches}} <? if($product[0]->coaches == 1){echo 'bak';}else{echo 'bakken';} ?></p>
->>>>>>> main
             <p><b>zitplaatsen:</b> <?= $seats ?></p>
         </div>
         <div class='product_info_subwrapper' id='product_info_subwrapper_2'>
@@ -101,8 +98,6 @@
             <p><b>koppeling:</b> {{$product[0]->coupling}} </p>
         </div>
     </div>
-
-    <p>{{$product[0]}}</p>
 
     <? include '../resources/views/include/general/footer.php'; ?>
     <script src='../../resources/js/ThemeSwitch.js'></script>

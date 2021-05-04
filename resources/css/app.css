@@ -762,6 +762,14 @@ a{
     margin: 0 auto;
 }
 
+#product_info_wrapper > p{
+    width: 100%;
+    text-align: center;
+    font-family: montserrat, sans-serif;
+    font-size: 20px;
+    padding: 0px 75px;
+}
+
 #product_info_subwrapper_1{
     float: left;
 }
@@ -788,21 +796,42 @@ a{
     font-size: 50px;
     vertical-align: middle;
     margin: 0;
-<<<<<<< HEAD
     transition: .3s;
-=======
->>>>>>> main
 }
 
 #product_price_wrapper:hover h1{
     color: yellow;
-<<<<<<< HEAD
 }
 
 #category_name{
     text-align: center;
     font-size: 50px;
     margin: 25px;
-=======
->>>>>>> main
+}
+
+
+
+
+
+
+
+
+
+
+/* styling for cart page */
+
+
+#cart_main_wrapper{
+    background-color: lightgrey;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+.cart_item{
+    padding: 25px;
+}
+
+.cart_item img{
+    width: 250px;
 }

@@ -32,8 +32,7 @@
         <? foreach($products as $product){ ?>
             <a href='{{Route("product.one", ["id" => $product->id])}}'><div id='product_{{$product->name}}' class='products_product_wrapper'>
                 <h1>{{$product->name}}</h1>
-                <p id='p{{$product->id}}'>{{$product->description}}</p>
-            </div></a>
+                <p id='p{{$product->id}}'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lectus ante, aliquam nec rhoncus in, mollis at eros.</p></div></a>
         <? } ?>
     </div>
 

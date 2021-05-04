@@ -35,25 +35,24 @@
                 $productName = str_replace('\'', '', $productName);?>
                 
                 <div class='cart_item'>
-                    <img alt="{{$product['item']['name']}}_image" src="../images/products/<?=$productName?>/<?=$productName?>_1.jpg"\>
-                    <h1>{{$product['item']['name']}}</h1>
-                    <h2>{{$product['item']['price']}}</h2>
+                    <a href='{{Route("product.one", ["id" => $product["item"]["id"]])}}'><img alt="{{$product['item']['name']}}_image" src="../images/products/<?=$productName?>/<?=$productName?>_1.jpg"\></a>
+                    <h1>{{$product['item']['name']}}:</h1>
+                    <h2> €{{$product['item']['price']}}</h2>
                     <input type='number' id='<?= $productName ?>_quantity_input' name='<?= $productName ?>_quantity' min='0' max='50' value="{{$product['quantity']}}">
-                    <h3>{{$totalPrice}}</h3>
-                    <i class="fas fa-trash"></i>
-
-
+                    <h3>€{{$totalPrice}}</h3>
+                    <i onclick='confirm("Weet u zeker dat u dit item ({{$product["item"]["name"]}}) wilt verwijderen uit uw winkelmandje?")' class="fas fa-trash"></i>
                 </div>
                 <!-- <p>{{$product['item']['name']}}</p>
                 <p>{{$product['quantity']}}</p>
                 <p>{{$totalPrice}}</p> -->
             @endforeach
-            <i class="fas fa-dumpster"></i>
+            <i onclick='confirm("Weet u zeker dat u uw hele winkelmandje wilt legen?")' class="fas fa-dumpster"></i>
+            @else
+                <p id='cart_no_items'>there are no items to be displayed... <a style='color: blue; text-decoration: underline;' href='{{Route("product.all")}}'>click here to get some!</a> choo choo!!</p>
         @endif
     </div>
 
-
-
-    NO ITEMS BITCH (r17)
+    <? include '../resources/views/include/general/footer.php'; ?>
+    
 </body>
 </html>

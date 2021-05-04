@@ -788,8 +788,15 @@ a{
     font-size: 50px;
     vertical-align: middle;
     margin: 0;
+    transition: .3s;
 }
 
 #product_price_wrapper:hover h1{
     color: yellow;
+}
+
+#category_name{
+    text-align: center;
+    font-size: 50px;
+    margin: 25px;
 }

@@ -593,7 +593,7 @@ class DatabaseSeeder extends Seeder
                 'traction' => '',
                 'system' => '',
                 'length' => 26,
-                'coaches' => 0,
+                'coaches' => 1,
                 'price' => '1999.99',
                 'description' => 'Your bones don\'t break, mine do. That\'s clear. We swallow it too fast, we choke.',
                 'seats' => 80,

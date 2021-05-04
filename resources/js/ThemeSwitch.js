@@ -54,6 +54,7 @@ function switchThemeAdvanced(mode){
             featured_offer_bottom.style.background = 'linear-gradient(0deg, rgba(25,25,25,.9) 50%, rgba(25,25,25,.20) 100%)';
             themeSwitchButton.setAttribute('data-sm-link-text', 'Darkmode');
             featured_offer_bottom.style.color = 'white';
+            view_all_products_button.style.color = 'white';
             for(i=0; i<4; i++){
                 document.getElementsByClassName("most_popular_items_cover")[i].style.backgroundColor = 'rgba(20, 20, 20, .5)';
             }
@@ -64,6 +65,8 @@ function switchThemeAdvanced(mode){
         if(document.title == 'Train Shop'){
             featured_offer_bottom.style.background = 'linear-gradient(0deg, rgba(255,255,255,.9) 50%, rgba(255,255,255,.20) 100%)';
             themeSwitchButton.setAttribute('data-sm-link-text', 'Lightmode');
+            featured_offer_bottom.style.color = 'black';
+            view_all_products_button.style.color = 'black';
             for(i=0; i<4; i++){
                 document.getElementsByClassName("most_popular_items_cover")[i].style.backgroundColor = 'rgba(255, 255, 255, .5)';
             }

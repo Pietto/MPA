@@ -84,7 +84,7 @@
             <p><b>afkorting:</b> {{$product[0]->name}}</p>
             <p><b>topsnelheid:</b> {{$product[0]->topspeed}} kmp/h</p>
             <p><b>lengte:</b> {{$product[0]->length}} meter</p>
-            <p><b>bakken:</b> {{$product[0]->coaches}} <? if($product[0]->coaches == 1){echo 'bak';}else{echo 'bakken';} ?></p>
+            <p><b>bakken:</b> {{$product[0]->coaches}} <? if($product[0]->coaches == 1){echo 'bak';}else if($product[0]->coaches == 0){echo 'n.v.t.';}else{echo 'bakken';} ?></p>
             <p><b>zitplaatsen:</b> <?= $seats ?></p>
         </div>
         <div class='product_info_subwrapper' id='product_info_subwrapper_2'>

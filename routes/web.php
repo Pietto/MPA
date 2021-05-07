@@ -21,6 +21,11 @@ Route::get('/addtocart', function () {
     return view('addtocart');
 });
 
+Route::get('/test/all', [
+    'uses' => 'App\Http\Controllers\TestController@index', 
+    'as' => 'test.all'
+]);
+
 Route::get('/category/all', [
     'uses' => 'App\Http\Controllers\CategoryController@GetAllCategories', 
     'as' => 'category.all'
@@ -50,3 +55,7 @@ Route::get('/addtoCart/{id}', [
     'uses' => 'App\Http\Controllers\CartController@store', 
     'as' => 'product.addToCart'
 ]);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

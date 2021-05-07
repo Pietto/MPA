@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="../resources/css/app.css">
     <link rel="stylesheet" href="../resources/css/animations.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
     <title>Train Shop</title>
 </head>
 <body>
+
+<a href='{{Route("test.all")}}'>click here</a>
     
     <div id='header_wrapper'>
         <div id='head_wrapper_left'>
@@ -25,6 +28,14 @@
         <div id='head_wrapper_right'>
             <a onclick='switchTheme()' class="btn2 btn-animation-four" id='themeSwitchButton' data-sm-link-text="Lightmode" target="_blank"><span>Mode</span></a>
             <a href='{{Route("product.shoppingCart")}}'>cart</a>
+            <div class="w3-dropdown-click">
+            <a onclick="dropDown()" class="">account</a>
+            <div id="Demo" class="w3-dropdown-content w3-bar-block w3-card-4 w3-animate-zoom">
+                <a href="#" class="w3-bar-item w3-button">Login</a>
+                <a href="#" class="w3-bar-item w3-button">Register</a>
+            </div>
+        </div>
+
             <a>account</a>
         </div>
     </div>
@@ -122,5 +133,37 @@
     <? include '../resources/views/include/index/staff_members.php'; ?>
     <? include '../resources/views/include/general/footer.php'; ?>
     <script src='../resources/js/ThemeSwitch.js'></script>
+
+    
+    @if (Route::has('login'))
+        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+            @auth
+                <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
+            @else
+                <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
+
+                @if (Route::has('register'))
+                    <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                @endif
+            @endauth
+        </div>
+    @endif
+
+
+        <!-- Use any of the w3-animate-classes to fade, zoom or slide in the dropdown content (w3-animate-zoom|opacity|top|bottom|left|right) -->
+
+
+
+    <script>
+        function dropDown() {
+            var x = document.getElementById("Demo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else { 
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+
 </body>
 </html>

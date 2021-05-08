@@ -76,6 +76,15 @@ a{
     vertical-align: middle;
 }
 
+.w3-dropdown-click:hover{
+    background-color: transparent !important;
+}
+
+.dropdown-item{
+    margin: 0 !important;
+    color: black !important;
+}
+
 /* styling for the 'featured offer' in index */
 
 #featured_offer_parent{

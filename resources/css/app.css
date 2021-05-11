@@ -842,6 +842,8 @@ a{
     background-color: rgba(0,0,0,.5);
     width: 100%;
     margin-bottom: 5px;
+    display: grid;
+    grid-template-columns: 25% 35% 20% 20%;
 }
 
 .cart_item h1, .cart_item h2, .cart_item input, .cart_item h3, .cart_item i{
@@ -855,7 +857,7 @@ a{
     top: 50px;
 }
 
-.cart_item i{
+.fa-trash{
     float: right;
     position: relative;
     top: 30px;
@@ -869,15 +871,22 @@ a{
     cursor: pointer;
 }
 
+.cart_item>div{
+    grid-column: 2/3;
+}
+
+#cart_trash_price_wrapper{
+    grid-column: 4/5;
+}
+
 .cart_item input{
-    position: absolute;
-    left: 1100px;
-    margin-top: 50px;
     outline: none;
+    width: 100%;
 }
 
 .cart_item img{
     width: 250px;
+    grid-column: 1/2;
 }
 
 .fa-dumpster{
@@ -889,4 +898,24 @@ a{
 
 .fa-dumpster:hover{
     color:rgb(229, 190, 3);
+}
+
+#product_quantity_wrapper{
+    position: relative;
+    left: 150px;
+    width: 75px;
+    grid-column: 3/4;
+    top: 25px;
+}
+
+.cart_quantity_arrows{
+    font-size: 30px;
+    color: white;
+    display: inline;
+    transition: .25s;
+    position: relative;
+    top: 5px;
+}
+#cart_quantity_arrow_down{
+    float: right;
 }

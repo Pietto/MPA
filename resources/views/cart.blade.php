@@ -39,12 +39,21 @@
                 
                 <div class='cart_item'>
                     <a href='{{Route("product.one", ["id" => $product["item"]["id"]])}}'><img alt="{{$product['item']['name']}}_image" src="../images/products/<?=$productName?>/<?=$productName?>_1.jpg"\></a>
-                    <h1>{{$product['item']['name']}}:</h1>
-                    <h2> €{{$product['item']['price']}}</h2>
-                    <input type='number' id='<?= $productName ?>_quantity_input' name='<?= $productName ?>_quantity' min='0' max='50' value="{{$product['quantity']}}">
-                    <h3>€ <?= $product['quantity']*$product['item']['price'] ?></h3>
-                    <a href='{{Route("product.delete", ["id" => $product["item"]["id"]])}}'><i class="fas fa-trash"></i></a>
-                    <!-- onclick='confirm("Weet u zeker dat u dit item ({{$product["item"]["name"]}}) wilt verwijderen uit uw winkelmandje?")' -->
+                    <div>
+                        <h1>{{$product['item']['name']}}:</h1>
+                        <h2> €{{$product['item']['price']}}</h2>
+                    </div>
+                    <div id='product_quantity_wrapper'>
+                        <input disabled type='number' id='<?= $productName ?>_quantity_input' name='<?= $productName ?>_quantity' min='0' max='50' value="{{$product['quantity']}}">
+                        <div>
+                            <a href='{{Route("product.addToCart", ["id" => $product["item"]["id"]])}}'><i id='cart_quantity_arrow_up' class="cart_quantity_arrows fas fa-arrow-up"></i></a>
+                            <a href='{{Route("product.subtractFromCart", ["id" => $product["item"]["id"]])}}'><i id='cart_quantity_arrow_down' class="cart_quantity_arrows fas fa-arrow-down"></i></a>
+                        </div>
+                    </div>
+                    <div id='cart_trash_price_wrapper'>
+                        <h3>€ <?= $product['quantity']*$product['item']['price'] ?></h3>
+                        <a href='{{Route("product.delete", ["id" => $product["item"]["id"]])}}'><i class="fas fa-trash"></i></a>
+                    </div>
                 </div>
                 <!-- <p>{{$product['item']['name']}}</p>
                 <p>{{$product['quantity']}}</p>

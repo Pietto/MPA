@@ -61,6 +61,11 @@ Route::get('/deleteFromCart/{id}', [
     'as' => 'product.delete'
 ]);
 
+Route::get('/subtractFromCart/{id}', [
+    'uses' => 'App\Http\Controllers\CartController@subtract', 
+    'as' => 'product.subtractFromCart'
+]);
+
 Route::get('/logout', [
     'uses' => 'App\Http\Controllers\Auth\logoutController@logout', 
     'as' => 'user.kill'

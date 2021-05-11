@@ -33,4 +33,12 @@ class CartController Extends Controller
         $cart->remove($id, $cart);
         return redirect()->back();
     }
+
+    public function subtract(Request $request, $id){
+        $empty;
+        $product = Product::find($id);
+        $cart = new Cart();
+        $cart->subtractProducts($product, $id, $request);
+        return redirect()->back();
+    }
 }

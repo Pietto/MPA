@@ -56,6 +56,16 @@ Route::get('/addtoCart/{id}', [
     'as' => 'product.addToCart'
 ]);
 
+Route::get('/deleteFromCart/{id}', [
+    'uses' => 'App\Http\Controllers\CartController@delete', 
+    'as' => 'product.delete'
+]);
+
+Route::get('/logout', [
+    'uses' => 'App\Http\Controllers\Auth\logoutController@logout', 
+    'as' => 'user.kill'
+]);
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

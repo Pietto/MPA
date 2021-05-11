@@ -13,7 +13,6 @@
 <body>
 
 <a href='{{Route("test.all")}}'>click here</a>
-    
     <div id='header_wrapper'>
         <div id='head_wrapper_left'>
             <a href='/jaar%202/Laravel/project_A/MPA/public/'>home</a>
@@ -33,8 +32,8 @@
                     @if (Route::has('login'))
                         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                             @auth
-                                <a><?= Auth::user()->username ?></a>
-                                <a href="http://localhost/jaar%202/Laravel/project_A/MPA/public/logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="dropdown-item w3-bar-item">uitloggen</a>
+                                <a href='' class="dropdown-item w3-bar-item">{{Auth::user()->name}}</a>
+                                <a href="{{ route('user.kill') }}" class="dropdown-item w3-bar-item">Uitloggen</a>
                                 <form id="logout-form" action="http://localhost/jaar%202/Laravel/project_A/MPA/public/logout" method="POST" class="d-none"><input type="hidden" name="_token" value="sfhh5t43nRlFlqm3umHXxPeF1rQRzScFEwjJ6fE1"></form>
                             @else
                                 <a href="{{ route('login') }}" class="dropdown-item w3-bar-item w3-button">Inloggen</a>
@@ -143,21 +142,6 @@
     <? include '../resources/views/include/index/staff_members.php'; ?>
     <? include '../resources/views/include/general/footer.php'; ?>
     <script src='../resources/js/ThemeSwitch.js'></script>
-
-
-    @if (Route::has('login'))
-        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-            @auth
-                <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
-            @else
-                <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
-
-                @if (Route::has('register'))
-                    <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
-                @endif
-            @endauth
-        </div>
-    @endif
 
 
         <!-- Use any of the w3-animate-classes to fade, zoom or slide in the dropdown content (w3-animate-zoom|opacity|top|bottom|left|right) -->

@@ -24,7 +24,13 @@ class CartController Extends Controller
     public function store(Request $request, $id){
         $product = Product::find($id);
         $cart = new Cart();
-        $cart->addProducts($product, $id, $request, $cart);
+        $cart->addProducts($product, $id, $request);
+        return redirect()->back();
+    }
+
+    public function delete($id){
+        $cart = new Cart();
+        $cart->remove($id, $cart);
         return redirect()->back();
     }
 }

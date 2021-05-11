@@ -37,7 +37,6 @@ function switchTheme(breaking){
             switchTheme(true);
         }
     }
-
 }
 
 /* switchThemeAdvanced(@param1) switched the more advanced properties of the page, this has been made a seperate page for simplicity's sake

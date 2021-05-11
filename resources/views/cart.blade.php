@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../resources/css/app.css">
     <link rel="stylesheet" href="../resources/css/animations.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="../resources/css/app.css">
     <title>traincart</title>
 </head>
 <body>
@@ -28,6 +28,9 @@
             <a>account</a>
         </div>
     </div>
+    
+    <i class="fas fa-arrow-circle-left" id='back_to_products_button' onclick='window.history.back();'></i>
+    
     <div id='cart_main_wrapper'>
         @if($products != NULL)
             @foreach($products as $product)
@@ -39,13 +42,15 @@
                     <h1>{{$product['item']['name']}}:</h1>
                     <h2> €{{$product['item']['price']}}</h2>
                     <input type='number' id='<?= $productName ?>_quantity_input' name='<?= $productName ?>_quantity' min='0' max='50' value="{{$product['quantity']}}">
-                    <h3>€{{$totalPrice}}</h3>
-                    <i onclick='confirm("Weet u zeker dat u dit item ({{$product["item"]["name"]}}) wilt verwijderen uit uw winkelmandje?")' class="fas fa-trash"></i>
+                    <h3>€ <?= $product['quantity']*$product['item']['price'] ?></h3>
+                    <a href='{{Route("product.delete", ["id" => $product["item"]["id"]])}}'><i class="fas fa-trash"></i></a>
+                    <!-- onclick='confirm("Weet u zeker dat u dit item ({{$product["item"]["name"]}}) wilt verwijderen uit uw winkelmandje?")' -->
                 </div>
                 <!-- <p>{{$product['item']['name']}}</p>
                 <p>{{$product['quantity']}}</p>
                 <p>{{$totalPrice}}</p> -->
             @endforeach
+            <h4>€ <?= $totalPrice ?></h4>
             <i onclick='confirm("Weet u zeker dat u uw hele winkelmandje wilt legen?")' class="fas fa-dumpster"></i>
             @else
                 <p id='cart_no_items'>there are no items to be displayed... <a style='color: blue; text-decoration: underline;' href='{{Route("product.all")}}'>click here to get some!</a> choo choo!!</p>
@@ -53,6 +58,6 @@
     </div>
 
     <? include '../resources/views/include/general/footer.php'; ?>
-    
+
 </body>
 </html>

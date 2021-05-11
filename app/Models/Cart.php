@@ -11,7 +11,7 @@ class Cart
     public $totalPrice = 0;
 
     function __construct(){
-        $currentCart = Session::has('Cart') ? Session::get('Cart') : NULL;
+        $currentCart = Session::has('cart') ? Session::get('cart') : NULL;
         if($currentCart != NULL){
             $this->items = $currentCart->items;
             $this->totalQuantity = $currentCart->totalQuantity;
@@ -19,17 +19,15 @@ class Cart
         }
     }
 
-    function addProducts($item, $id, $request, $cart){
-        $items = [];
-        $totalQuantity = 0;
-        $totalPrice = 0;
+    function addProducts($item, $id, $request){
 
-        $request->session()->put('Cart', $cart);
+        $this->totalQuantity;
+
         $categoryID = ProductCategory::where('product_ID', $id)->value('Category_ID');
         $category = Category::where('id', $categoryID)->value('name');
 
-        $currentItem = ['quantity'=>0, 'price'=>$item->price, 'item'=>$item, 'category'=>$category];        //$product[choice is urs]
-        
+        $currentItem = ['quantity'=>0, 'price'=>$item->price, 'item'=>$item, 'category'=>$category];
+
         if(array_key_exists($id, $this->items)){
             $currentItem = $this->items[$id];
         }
@@ -39,5 +37,14 @@ class Cart
         $this->items[$id] = $currentItem;
         $this->totalQuantity++;
         $this->totalPrice += $item->price;
+
+        $request->session()->put('cart', $this);
+    }
+
+    public function remove($id, $cart){
+        Session::put('cart', $cart);
+        $this->totalQuantity -= $this->items[$id]['quantity'];
+        $this->totalPrice -= $this->items[$id]['price'];
+        unset($this->items[$id]);
     }
 }

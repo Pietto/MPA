@@ -34,6 +34,12 @@ class CartController Extends Controller
         return redirect()->back();
     }
 
+    public function deleteAll(){
+        $cart = new Cart();
+        $cart->removeAll($cart);
+        return redirect()->back();
+    }
+
     public function subtract(Request $request, $id){
         $empty;
         $product = Product::find($id);

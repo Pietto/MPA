@@ -45,7 +45,14 @@ class Cart
         unset($this->items[$id]);
     }
 
-    public function subtractProducts($item, $id, $request, $empty){
+    public function removeAll($cart){
+        Session::put('cart', $cart);
+        $this->totalQuantity = 0;
+        $this->totalPrice = 0;
+        unset($this->items);
+    }
+
+    public function subtractProducts($item, $id, $request){
 
         $categoryID = ProductCategory::where('product_ID', $id)->value('Category_ID');
         $category = Category::where('id', $categoryID)->value('name');
@@ -57,9 +64,7 @@ class Cart
         }
         
         if($currentItem['quantity'] <= 1){
-            $empty == true;
         }else{
-            $empty == false;
             $currentItem['quantity']--;
             $currentItem['price'] = $currentItem['quantity'] * $item->price;
             $this->items[$id] = $currentItem;

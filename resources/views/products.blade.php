@@ -23,7 +23,7 @@
             
         <div id='head_wrapper_right'>
             <a onclick='switchTheme()' class="btn2 btn-animation-four" id='themeSwitchButton' data-sm-link-text="Lightmode" target="_blank"><span>Mode</span></a>
-            <a href='{{Route("product.shoppingCart")}}'>cart (0)</a>
+            <a href='{{Route("product.shoppingCart")}}'>cart</a>
             <a>account</a>
         </div>
     </div>

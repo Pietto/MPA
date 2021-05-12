@@ -59,10 +59,13 @@
                 <p>{{$product['quantity']}}</p>
                 <p>{{$totalPrice}}</p> -->
             @endforeach
-            <h4>€ <?= $totalPrice ?></h4>
-            <i onclick='confirm("Weet u zeker dat u uw hele winkelmandje wilt legen?")' class="fas fa-dumpster"></i>
+            <a onclick="return confirm('Weet u zeker dat u alle items wilt verwijderen uit uw winkelmandje?')" href='{{Route("product.deleteAll")}}'><i class="fas fa-dumpster"></i></a>
+            <a href=''>
+                <span>Bestelling afronden: € <?= $totalPrice ?>.</span>
+                <i class="fas fa-cart-plus"></i>
+            </a>
             @else
-                <p id='cart_no_items'>there are no items to be displayed... <a style='color: blue; text-decoration: underline;' href='{{Route("product.all")}}'>click here to get some!</a> choo choo!!</p>
+                <p id='cart_no_items'>u heeft geen items in uw karretje <a style='color: blue; text-decoration: underline;' href='{{Route("product.all")}}'>klik hier voor meer treinen</a>, tjoek tjoek!!</p>
         @endif
     </div>
 

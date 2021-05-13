@@ -20,4 +20,10 @@
         </div>
     </div>
 </div>
+
+<!-- <script type="text/javascript">
+    window.location = "http://google.com";
+</script> -->
+
 @endsection
+

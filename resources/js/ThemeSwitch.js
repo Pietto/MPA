@@ -5,13 +5,13 @@
 var darkMode = false;
 
 /* on clicking the switchbutton in the header function switchTheme(@param1) is activated;
-** the if/else statement determents whether the mode is dark or light, and swithces it to the opposite
-** first a few simple items get changed from color
-** function switchThemeAdvanced(@param2) switches all more 'complicated' attributes for an less complicated code
-** darkmode is switched now, so var darkMode can be switched too
-** and lastly, logging to the console that the mode has been switched
-** @param1 ('breaking) prevents breaking: when accidentally a parameter has been fed with switchTheme('here), it will follow up to the else, on which the function will re-activate without changing any properties (by going into the first if statement). this prevents breaking the code.
-** @param2 states whether it should be change to dark or lightmode, again for simplicity
+* the if/else statement determents whether the mode is dark or light, and swithces it to the opposite
+* first a few simple items get changed from color
+* function switchThemeAdvanced(@param2) switches all more 'complicated' attributes for an less complicated code
+* darkmode is switched now, so var darkMode can be switched too
+* and lastly, logging to the console that the mode has been switched
+* @param1 ('breaking) prevents breaking: when accidentally a parameter has been fed with switchTheme('here), it will follow up to the else, on which the function will re-activate without changing any properties (by going into the first if statement). this prevents breaking the code.
+* @param2 states whether it should be change to dark or lightmode, again for simplicity
 */
 
 function switchTheme(breaking){

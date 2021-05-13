@@ -230,18 +230,18 @@ div[class*=box] {
 }
 
 .btn-animation-four::before{
-    content: attr(data-sm-link-text);
-	color: #FFF;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    -webkit-transform: translateY(500%) scale(-0.1,20);
+  content: attr(data-sm-link-text);
+  color: #FFF;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-transform: translateY(500%) scale(-0.1,20);
 }
 
 .btn-animation-four:hover::before{
-    letter-spacing: 0.05em;
-    transform: translateY(0) scale(1,1);
+  letter-spacing: 0.05em;
+  transform: translateY(0) scale(1,1);
 }
 
 

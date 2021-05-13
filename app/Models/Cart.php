@@ -74,4 +74,19 @@ class Cart
             $request->session()->put('cart', $this);
         }
     }
+
+    public function checkout($cart){
+        foreach($cart->items as $product){
+            $productorder = new Order();
+            $productorder->product_ID = $product['item']['id'];
+            $productorder->product_quantity = $product['quantity'];
+            $productorder->order_ID = UserOrder::orderBy('id', 'desc')->value('id');
+            $productorder->user_ID = Auth::user()->UserOrder()->value('user_ID');
+            $productorder->save();
+        }
+    }
+
+    public function forget(){
+        Session::forget('cart');
+    }
 }

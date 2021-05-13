@@ -69,6 +69,17 @@
         @endif
     </div>
 
+    <div class="button5">
+        @if(Auth::check() && $products != null) 
+        <a href="{{ route('cart.order')}}">a</a>
+            <button action="{{ route('cart.order')}}">order</button>
+        @elseif(Auth::check())
+            <button disabled>order</button>
+        @else
+            <a href="#" class="btn">U moet eerst inloggen:</a>
+            <button disabled>order</button>
+        @endif
+    </div>
     <? include '../resources/views/include/general/footer.php'; ?>
 
 </body>

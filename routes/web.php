@@ -71,6 +71,11 @@ Route::get('/subtractFromCart/{id}', [
     'as' => 'product.subtractFromCart'
 ]);
 
+Route::get('/orderItems', [
+    'uses' => 'App\Http\Controllers\CartController@checkout', 
+    'as' => 'cart.order'
+]);
+
 Route::get('/logout', [
     'uses' => 'App\Http\Controllers\Auth\logoutController@logout', 
     'as' => 'user.kill'

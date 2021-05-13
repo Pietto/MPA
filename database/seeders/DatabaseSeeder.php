@@ -602,5 +602,12 @@ class DatabaseSeeder extends Seeder
                 'coupling' => 'schoefkoppeling'
             ]
             ]);
+
+
+
+
+            DB::table('users')->insert([
+                ['email' => 'admin@admin', 'name' => 'admin', 'password' => bcrypt('admin')]
+            ]);
     }
 }

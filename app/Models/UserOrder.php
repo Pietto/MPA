@@ -17,7 +17,6 @@ class UserOrder extends Model
         return $this->belongsTo('App\Models\User');
     }
     public function order(){
-        dd('asdf');
         return $this->hasMany('App\Models\Order', 'order_id');
     }
 }

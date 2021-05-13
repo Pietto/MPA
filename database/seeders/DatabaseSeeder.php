@@ -16,203 +16,203 @@ class DatabaseSeeder extends Seeder
     {
         DB::table('product_category')->insert([
             [
-                'product_ID' => 1,
-                'category_ID' => 4
+                'product_id' => 1,
+                'category_id' => 4
             ],[
-                'product_ID' => 1,
-                'category_ID' => 6
+                'product_id' => 1,
+                'category_id' => 6
             ],[
-                'product_ID' => 1,
-                'category_ID' => 7
+                'product_id' => 1,
+                'category_id' => 7
             ],[
-                'product_ID' => 2,
-                'category_ID' => 4
+                'product_id' => 2,
+                'category_id' => 4
             ],[
-                'product_ID' => 2,
-                'category_ID' => 6
+                'product_id' => 2,
+                'category_id' => 6
             ],[
-                'product_ID' => 2,
-                'category_ID' => 8
+                'product_id' => 2,
+                'category_id' => 8
             ],[
-                'product_ID' => 3,
-                'category_ID' => 1
+                'product_id' => 3,
+                'category_id' => 1
             ],[
-                'product_ID' => 3,
-                'category_ID' => 3
+                'product_id' => 3,
+                'category_id' => 3
             ],[
-                'product_ID' => 3,
-                'category_ID' => 13
+                'product_id' => 3,
+                'category_id' => 13
             ],[
-                'product_ID' => 4,
-                'category_ID' => 4
+                'product_id' => 4,
+                'category_id' => 4
             ],[
-                'product_ID' => 4,
-                'category_ID' => 6
+                'product_id' => 4,
+                'category_id' => 6
             ],[
-                'product_ID' => 4,
-                'category_ID' => 7
+                'product_id' => 4,
+                'category_id' => 7
             ],[
-                'product_ID' => 5,
-                'category_ID' => 1
+                'product_id' => 5,
+                'category_id' => 1
             ],[
-                'product_ID' => 5,
-                'category_ID' => 2
+                'product_id' => 5,
+                'category_id' => 2
             ],[
-                'product_ID' => 5,
-                'category_ID' => 9
+                'product_id' => 5,
+                'category_id' => 9
             ],[
-                'product_ID' => 6,
-                'category_ID' => 1
+                'product_id' => 6,
+                'category_id' => 1
             ],[
-                'product_ID' => 6,
-                'category_ID' => 3
+                'product_id' => 6,
+                'category_id' => 3
             ],[
-                'product_ID' => 6,
-                'category_ID' => 8
+                'product_id' => 6,
+                'category_id' => 8
             ],[
-                'product_ID' => 7,
-                'category_ID' => 4
+                'product_id' => 7,
+                'category_id' => 4
             ],[
-                'product_ID' => 7,
-                'category_ID' => 6
+                'product_id' => 7,
+                'category_id' => 6
             ],[
-                'product_ID' => 7,
-                'category_ID' => 7
+                'product_id' => 7,
+                'category_id' => 7
             ],[
-                'product_ID' => 7,
-                'category_ID' => 9
+                'product_id' => 7,
+                'category_id' => 9
             ],[
-                'product_ID' => 8,
-                'category_ID' => 4
+                'product_id' => 8,
+                'category_id' => 4
             ],[
-                'product_ID' => 8,
-                'category_ID' => 6
+                'product_id' => 8,
+                'category_id' => 6
             ],[
-                'product_ID' => 8,
-                'category_ID' => 7
+                'product_id' => 8,
+                'category_id' => 7
             ],[
-                'product_ID' => 9,
-                'category_ID' => 4
+                'product_id' => 9,
+                'category_id' => 4
             ],[
-                'product_ID' => 9,
-                'category_ID' => 6
+                'product_id' => 9,
+                'category_id' => 6
             ],[
-                'product_ID' => 9,
-                'category_ID' => 7
+                'product_id' => 9,
+                'category_id' => 7
             ],[
-                'product_ID' => 10,
-                'category_ID' => 4
+                'product_id' => 10,
+                'category_id' => 4
             ],[
-                'product_ID' => 10,
-                'category_ID' => 6
+                'product_id' => 10,
+                'category_id' => 6
             ],[
-                'product_ID' => 10,
-                'category_ID' => 7
+                'product_id' => 10,
+                'category_id' => 7
             ],[
-                'product_ID' => 10,
-                'category_ID' => 11
+                'product_id' => 10,
+                'category_id' => 11
             ],[
-                'product_ID' => 11,
-                'category_ID' => 5
+                'product_id' => 11,
+                'category_id' => 5
             ],[
-                'product_ID' => 11,
-                'category_ID' => 6
+                'product_id' => 11,
+                'category_id' => 6
             ],[
-                'product_ID' => 11,
-                'category_ID' => 7
+                'product_id' => 11,
+                'category_id' => 7
             ],[
-                'product_ID' => 11,
-                'category_ID' => 9
+                'product_id' => 11,
+                'category_id' => 9
             ],[
-                'product_ID' => 12,
-                'category_ID' => 9
+                'product_id' => 12,
+                'category_id' => 9
             ],[
-                'product_ID' => 12,
-                'category_ID' => 10
+                'product_id' => 12,
+                'category_id' => 10
             ],[
-                'product_ID' => 13,
-                'category_ID' => 9
+                'product_id' => 13,
+                'category_id' => 9
             ],[
-                'product_ID' => 13,
-                'category_ID' => 10
+                'product_id' => 13,
+                'category_id' => 10
             ],[
-                'product_ID' => 14,
-                'category_ID' => 4
+                'product_id' => 14,
+                'category_id' => 4
             ],[
-                'product_ID' => 14,
-                'category_ID' => 6
+                'product_id' => 14,
+                'category_id' => 6
             ],[
-                'product_ID' => 14,
-                'category_ID' => 7
+                'product_id' => 14,
+                'category_id' => 7
             ],[
-                'product_ID' => 14,
-                'category_ID' => 8
+                'product_id' => 14,
+                'category_id' => 8
             ],[
-                'product_ID' => 14,
-                'category_ID' => 11
+                'product_id' => 14,
+                'category_id' => 11
             ],[
-                'product_ID' => 15,
-                'category_ID' => 4
+                'product_id' => 15,
+                'category_id' => 4
             ],[
-                'product_ID' => 15,
-                'category_ID' => 6
+                'product_id' => 15,
+                'category_id' => 6
             ],[
-                'product_ID' => 15,
-                'category_ID' => 7
+                'product_id' => 15,
+                'category_id' => 7
             ],[
-                'product_ID' => 15,
-                'category_ID' => 8
+                'product_id' => 15,
+                'category_id' => 8
             ],[
-                'product_ID' => 15,
-                'category_ID' => 11
+                'product_id' => 15,
+                'category_id' => 11
             ],[
-                'product_ID' => 15,
-                'category_ID' => 9
+                'product_id' => 15,
+                'category_id' => 9
             ],[
-                'product_ID' => 16,
-                'category_ID' => 1
+                'product_id' => 16,
+                'category_id' => 1
             ],[
-                'product_ID' => 16,
-                'category_ID' => 3
+                'product_id' => 16,
+                'category_id' => 3
             ],[
-                'product_ID' => 16,
-                'category_ID' => 11
+                'product_id' => 16,
+                'category_id' => 11
             ],[
-                'product_ID' => 17,
-                'category_ID' => 4
+                'product_id' => 17,
+                'category_id' => 4
             ],[
-                'product_ID' => 17,
-                'category_ID' => 6
+                'product_id' => 17,
+                'category_id' => 6
             ],[
-                'product_ID' => 17,
-                'category_ID' => 8
+                'product_id' => 17,
+                'category_id' => 8
             ],[
-                'product_ID' => 18,
-                'category_ID' => 1
+                'product_id' => 18,
+                'category_id' => 1
             ],[
-                'product_ID' => 18,
-                'category_ID' => 3
+                'product_id' => 18,
+                'category_id' => 3
             ],[
-                'product_ID' => 18,
-                'category_ID' => 9
+                'product_id' => 18,
+                'category_id' => 9
             ],[
-                'product_ID' => 19,
-                'category_ID' => 5
+                'product_id' => 19,
+                'category_id' => 5
             ],[
-                'product_ID' => 19,
-                'category_ID' => 6
+                'product_id' => 19,
+                'category_id' => 6
             ],[
-                'product_ID' => 19,
-                'category_ID' => 7
+                'product_id' => 19,
+                'category_id' => 7
             ],[
-                'product_ID' => 19,
-                'category_ID' => 11
+                'product_id' => 19,
+                'category_id' => 11
             ],[
-                'product_ID' => 20,
-                'category_ID' => 9
+                'product_id' => 20,
+                'category_id' => 9
             ],[
-                'product_ID' => 20,
-                'category_ID' => 10
+                'product_id' => 20,
+                'category_id' => 10
             ]
         ]);
 
@@ -484,7 +484,7 @@ class DatabaseSeeder extends Seeder
             ],[
                 'id' => 14,
                 'name' => 'mat \'54',
-                'variant' => 'Materieel 1954 EID-4 Plan P',
+                'variant' => 'Materieel 1954 Eid-4 Plan P',
                 'topspeed' => 140,
                 'weight' => 210,
                 'voltage' => '1.5kV',

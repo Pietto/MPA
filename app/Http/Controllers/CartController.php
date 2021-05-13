@@ -27,8 +27,7 @@ class CartController Extends Controller
         $product = Product::find($id);
         $cart = new Cart();
         $cart->addProducts($product, $id, $request);
-
-        echo '<script>alert("item aan winkelmandje toegevoegd")</script>';
+        echo 'echo "<script>alert("item aan winkelmandje toegevoegd")</script>";';
         return redirect()->back();
     }
 

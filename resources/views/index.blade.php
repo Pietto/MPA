@@ -11,8 +11,6 @@
     <title>Train Shop</title>
 </head>
 <body>
-
-<a href='{{Route("test.all")}}'>click here</a>
     <div id='header_wrapper'>
         <div id='head_wrapper_left'>
             <a href='/jaar%202/Laravel/project_A/MPA/public/'>home</a>
@@ -32,7 +30,7 @@
                     @if (Route::has('login'))
                         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                             @auth
-                                <a href='' class="dropdown-item w3-bar-item">{{Auth::user()->name}}</a>
+                                <a href="{{ route('user.orders') }}" class="dropdown-item w3-bar-item">{{Auth::user()->name}}</a>
                                 <a href="{{ route('user.kill') }}" class="dropdown-item w3-bar-item">Uitloggen</a>
                                 <form id="logout-form" action="http://localhost/jaar%202/Laravel/project_A/MPA/public/logout" method="POST" class="d-none"><input type="hidden" name="_token" value="sfhh5t43nRlFlqm3umHXxPeF1rQRzScFEwjJ6fE1"></form>
                             @else
@@ -45,7 +43,6 @@
                     @endif
                 </div>
             </div>
-            <a></a><a></a>
         </div>
     </div>
 
@@ -149,6 +146,7 @@
 
 
     <script src='../resources/js/DropDownLogic.js'></script>
+    
 
 </body>
 </html>

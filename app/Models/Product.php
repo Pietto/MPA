@@ -9,6 +9,7 @@ class Product extends Model
     use HasFactory;
 
     public function Order(){
+        dd('test3');
         return $this->belongsTo('App\Models\Order');
     }
 }

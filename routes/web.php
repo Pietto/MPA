@@ -17,6 +17,11 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/home', [
+    'uses' => 'App\Http\Controllers\HomeController@index', 
+    'as' => 'home'
+]);
+
 Route::get('/addtocart', function () {
     return view('addtocart');
 });
@@ -81,6 +86,9 @@ Route::get('/logout', [
     'as' => 'user.kill'
 ]);
 
-Auth::routes();
+Route::get('/user', [
+    'uses' => 'App\Http\Controllers\UserController@showOrders', 
+    'as' => 'user.orders'
+]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Auth::routes();

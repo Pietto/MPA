@@ -14,8 +14,8 @@ class CreateProductCategoryTable extends Migration
     public function up()
     {
         Schema::create('product_category', function (Blueprint $table) {
-            $table->integer('product_ID');
-            $table->integer('category_ID');
+            $table->integer('product_id');
+            $table->integer('category_id');
         });
     }
 

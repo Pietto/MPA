@@ -9,10 +9,11 @@ class Order extends Model
 {
     use HasFactory;
 
-    public function Product(){
+    public function product(){
         return $this->belongsTo('App\Models\Product');
     }
     public function UserOrder(){
+        dd('test2');
         return $this->belongsTo('App\Models\UserOrder');
     }
 }

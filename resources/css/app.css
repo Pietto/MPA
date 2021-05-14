@@ -10,6 +10,10 @@ body{
     background-color: #FEF8F8;
 }
 
+a:hover{
+    cursor: pointer;
+}
+
 /* removes styling from all <a> tags, making them appear as <p> tags */
 
 a{
@@ -840,20 +844,28 @@ a{
 /* styling for cart page */
 
 
-#cart_main_wrapper{
+.cart_main_wrapper{
     width: 70%;
     margin: 0 auto;
     margin-top: 25px;
+    background-image: url('../../images/random/mega_background_image_2.png');
+    background-size: cover;
+}
+
+#noBackgroundImage{
+    background-image: none;
     margin-bottom: 100px;
 }
 
 .cart_item{
     padding: 25px;
     background-color: rgba(0,0,0,.5);
-    width: 100%;
+    width: 99.2%;
     margin-bottom: 5px;
     display: grid;
     grid-template-columns: 25% 35% 20% 20%;
+    backdrop-filter: blur(3px);
+    color: white;
 }
 
 .cart_item h1, .cart_item h2, .cart_item input, .cart_item h3, .cart_item i{
@@ -872,7 +884,6 @@ a{
     position: relative;
     top: 30px;
     font-size: 30px;
-    color: black;
     transition: .35s;
 }
 
@@ -935,6 +946,7 @@ a{
     font-size: 20px;
     font-family: montserrat, sans-serif;
     transition: .4s;
+    color: darkblue;
 }
 
 #cart_checkout_span i, #cart_checkout_span p{
@@ -942,7 +954,7 @@ a{
 }
 
 #cart_checkout_span:hover{
-    color: darkblue;
+    color: rgb(229, 190, 3);
 }
 
 
@@ -1133,4 +1145,8 @@ svg{
 }
 #head_wrapper_right{
     display: inline;
+}
+
+.order h2{
+    margin-bottom: -15px;
 }

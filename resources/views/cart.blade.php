@@ -47,9 +47,9 @@
     </div>
     
     <i class="fas fa-arrow-circle-left" id='back_to_products_button' onclick='window.history.back();'></i>
+    @if($products != NULL)
     
-    <div id='cart_main_wrapper'>
-        @if($products != NULL)
+        <div class='cart_main_wrapper'>
             @foreach($products as $product)
                 <? $productName = str_replace(' ', '', $product['item']['name']);
                 $productName = str_replace('\'', '', $productName);?>
@@ -76,15 +76,33 @@
                 <p>{{$product['quantity']}}</p>
                 <p>{{$totalPrice}}</p> -->
             @endforeach
+        </div>
+        <div class='cart_main_wrapper' id='noBackgroundImage'>
+
             <a onclick="return confirm('Weet u zeker dat u alle items wilt verwijderen uit uw winkelmandje?')" href='{{Route("product.deleteAll")}}'><i class="fas fa-dumpster"></i></a>
-            <a id='cart_checkout_span' href="http://localhost/jaar%202/Laravel/project_A/MPA/public/orderItems">
+
+                @if(Auth::check())
+                    <a id='cart_checkout_span' href="http://localhost/jaar%202/Laravel/project_A/MPA/public/orderItems">
+                @else()
+                    <a id='cart_checkout_span' onclick='alert("U moet eerst inloggen!")'>
+                @endif
                 <p>Bestelling afronden: € <?= $totalPrice ?>.</p>
                 <i class="fas fa-credit-card"></i>
             </a>
-            @else
+
+
+
+        </div>
+        @else
+            <div class='cart_main_wrapper' id='noBackgroundImage'>
                 <p id='cart_no_items'>u heeft geen items in uw karretje <a style='color: blue; text-decoration: underline;' href='{{Route("product.all")}}'>klik hier voor meer treinen</a>, tjoek tjoek!!</p>
+            @if(Auth::check())
+
+            @else
+                <p>Psst! Vergeet ook niet in te loggen</p>
+            @endif
+            </div>
         @endif
-    </div>
 
     <div class="button5">
         @if(Auth::check() && $products != null) 

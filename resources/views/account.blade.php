@@ -50,10 +50,10 @@
             <div id='orders_wrapper'>
                 <h1>Bestellingen:</h1>
                 @foreach($orders as $order)
-                    <? $totalPrice = 0; ?>
                     <p>bestellings id: <?= rand(1000, 10000) ?>TRN{{$order->id}}, <br> besteld op: {{$order->created_at}}.</p>
                     <div class='order' id='order_{{$order->id}}'>
                         @foreach($order->order as $item)
+                            <? $totalPrice = 0; ?>
 
                             <?
                                 $productName = str_replace(' ', '', $item->product['name']);
@@ -69,7 +69,7 @@
                                 <p>{{$item['product_quantity']}}x €{{$item->product['price']}}: €<?= $totalPrice ?></p>
                             </div>
                             <?php 
-                                $totalPrice = $totalPrice + $item->product['price'] * $item['product_quantity'];
+                                $totalPrice = $item->product['price'] * $item['product_quantity'];
                             ?>
                         @endforeach
                     <h3>Bestelling totaalprijs: €{{$totalPrice}}</h3>

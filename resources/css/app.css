@@ -919,3 +919,130 @@ a{
 #cart_quantity_arrow_down{
     float: right;
 }
+
+
+
+
+
+
+
+/* login / registration page's */
+
+.account_forms{
+    background-color: transparent;
+    height: 600px;
+    width: 400px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: rgba(0,0,0,.55);
+    backdrop-filter: blur(3px);
+    color: white;
+}
+
+.form_row input{
+    border: none;
+    background-color: transparent;
+    -webkit-appearance: none;
+    outline: none;
+    border-bottom: rgba(0,0,255,0) solid 1px;
+    transition: .4s ease-in-out;
+    width: 330px;
+    color: white;
+    font-size: 20px;
+}
+
+.form_row input::placeholder{
+    color: rgba(255,255,255,.65)
+}
+
+.form_row input:active, .form_row:focus{
+    border: none;
+    background-color: transparent;
+    -webkit-appearance: none;
+    outline: none;
+    border-bottom: rgba(0,0,255,1) solid 1px;
+}
+
+.form_row{
+    border-bottom: 2px solid rgb(229,190,3);
+    margin-top: 25px;
+}
+
+.form_wrapper{
+    background-image: url('../../images/random/item_25.jpg');
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 75px;
+}
+
+form img{
+    width: 100%;
+    height: auto;
+}
+
+#password_forgot_btn{
+    margin-top: 30px;
+}
+
+.no_border{
+    border: none;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
+
+.center p{
+    color: transparent;
+    height: 80px;
+}
+
+.center{
+    width: 180px;
+    height: 60px;
+}
+
+.form_submit_buttons{
+    width: 180px;
+    height: 60px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid rgb(229,190,3);
+    outline: none;
+    transition: 1s ease-in-out;
+    margin-left: 75px;
+  
+}
+
+svg {
+    position: relative;
+    left: -7px;
+    top: -2px;
+    fill: none;
+    stroke: darkblue;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+}
+
+.form_submit_buttons:hover{
+    transition: 1s ease-in-out;
+    background: rgb(229,190,3);
+}
+
+.form_submit_buttons:hover svg{
+    stroke-dashoffset: -480;
+}
+
+.form_submit_buttons:hover span{
+    color: black;
+}
+
+.form_submit_buttons span{
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+    position: relative;
+    top: -50px;
+    font-family: Montserrat bold, sans-serif;
+}

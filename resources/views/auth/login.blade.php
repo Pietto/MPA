@@ -8,56 +8,65 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
     <link rel="stylesheet" href="../resources/css/app.css">
     <link rel="stylesheet" href="../resources/css/animations.css">
-    <title>Train Shop</title>
+    <title>Train Shop - login</title>
 </head>
 <body>
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
-        
-        <div class="form_row">
-            <label for="email">{{ __('e-mailadres') }}</label>
-            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+    <div class='form_wrapper'>
+        <form id='login_form' class='account_forms' method="POST" action="{{ route('login') }}">
+            @csrf
 
-            @error('email')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
-        </div>
+            <img src='../images/testLogo.png' alt='logo'/>
+            
+            <div class="form_row">
+                <i class="far fa-user"></i>
+                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder='emailadres'>
 
-        <div class="form_row">
-            <label for="password">{{ __('wachtwoord') }}</label>
-            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-            @error('password')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
-        </div>
-
-        <div class="form_row">
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                <label class="form-check-label" for="remember">
-                    {{ __('Remember Me') }}
-                </label>
+                @error('email')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
             </div>
-        </div>
 
-        <div class="form_row">
-            <button type="submit">
-                {{ __('Login') }}
-            </button>
+            <div class="form_row">
+                <i class="fas fa-fingerprint"></i>
+                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder='wachtwoord'>
 
-            @if (Route::has('password.request'))
-                <a class="btn btn-link" href="{{ route('password.request') }}">
-                    {{ __('Forgot Your Password?') }}
-                </a>
-            @endif
-        </div>
+                @error('password')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
 
-    </form>
+            <div class="form_row center no_border">
+                <button id='submit_login_button' class='form_submit_buttons' type="submit">
+                    <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                    <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                    <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+                    </svg>
+                    <span>{{ __('Login') }}</span>
+                </button>
+            </div>
+            <div class="form_row no_border">
+
+                @if (Route::has('password.request'))
+                    <a class="btn btn-link" id='password_forgot_btn' href="{{ route('password.request') }}">
+                        {{ __('Forgot Your Password?') }}
+                    </a>
+                @endif
+            </div>
+
+
+            <!-- <i class="far fa-user"></i>
+            <i class="fas fa-fingerprint"></i> -->
+
+
+
+
+
+
+        </form>
+    </div>
 </body>
 </html>

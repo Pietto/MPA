@@ -76,3 +76,24 @@ function switchThemeAdvanced(mode){
         console.log('error: mode "' + mode + '" not recornised');
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if(document.title == 'products'){
+    
+}
+
+console.log('ThemeSwitch.js reached');

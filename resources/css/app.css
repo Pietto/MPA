@@ -721,6 +721,16 @@ a{
 
 /* styling for product page */
 
+.fa-cart-plus{
+    color: white;
+    display: inline-block;
+    font-size: 35px;
+    position: relative;
+    top: 7.5px;
+    left: 10px;
+    transition: .3s;
+}
+
 #back_to_products_button{
     font-size: 50px;
     color: darkblue;
@@ -805,9 +815,10 @@ a{
     vertical-align: middle;
     margin: 0;
     transition: .3s;
+    display: inline-block;
 }
 
-#product_price_wrapper:hover h1{
+#product_price_wrapper:hover h1, #product_price_wrapper:hover i{
     color: yellow;
 }
 
@@ -919,6 +930,21 @@ a{
     float: right;
 }
 
+#cart_checkout_span{
+    float: right;
+    font-size: 20px;
+    font-family: montserrat, sans-serif;
+    transition: .4s;
+}
+
+#cart_checkout_span i, #cart_checkout_span p{
+    display: inline-block;
+}
+
+#cart_checkout_span:hover{
+    color: darkblue;
+}
+
 
 
 
@@ -1013,7 +1039,7 @@ form img{
   
 }
 
-svg {
+svg{
     position: relative;
     left: -7px;
     top: -2px;
@@ -1104,4 +1130,7 @@ svg {
 
 .order a:hover{
     color: rgb(229,190,3);
+}
+#head_wrapper_right{
+    display: inline;
 }

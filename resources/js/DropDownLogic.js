@@ -6,3 +6,5 @@ function dropDown() {
         x.className = x.className.replace(" w3-show", "");
     }
 }
+
+console.log('DropDownLogic.js reached');

@@ -30,7 +30,7 @@
                     @if (Route::has('login'))
                         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                             @auth
-                                <a href='' class="dropdown-item w3-bar-item">{{Auth::user()->name}}</a>
+                                <a href="{{ route('user.orders') }}" class="dropdown-item w3-bar-item">{{Auth::user()->name}}</a>
                                 <a href="{{ route('user.kill') }}" class="dropdown-item w3-bar-item">Uitloggen</a>
                                 <form id="logout-form" action="http://localhost/jaar%202/Laravel/project_A/MPA/public/logout" method="POST" class="d-none"><input type="hidden" name="_token" value="sfhh5t43nRlFlqm3umHXxPeF1rQRzScFEwjJ6fE1"></form>
                             @else
@@ -77,9 +77,9 @@
                 <p>{{$totalPrice}}</p> -->
             @endforeach
             <a onclick="return confirm('Weet u zeker dat u alle items wilt verwijderen uit uw winkelmandje?')" href='{{Route("product.deleteAll")}}'><i class="fas fa-dumpster"></i></a>
-            <a href=''>
-                <span>Bestelling afronden: € <?= $totalPrice ?>.</span>
-                <i class="fas fa-cart-plus"></i>
+            <a id='cart_checkout_span' href="http://localhost/jaar%202/Laravel/project_A/MPA/public/orderItems">
+                <p>Bestelling afronden: € <?= $totalPrice ?>.</p>
+                <i class="fas fa-credit-card"></i>
             </a>
             @else
                 <p id='cart_no_items'>u heeft geen items in uw karretje <a style='color: blue; text-decoration: underline;' href='{{Route("product.all")}}'>klik hier voor meer treinen</a>, tjoek tjoek!!</p>

@@ -48,7 +48,7 @@
             <a href='{{Route("category.all")}}'>categories</a>
         </div>
         <div id='head_wrapper_center'>
-            <img id='header_logo' alt='company logo' src='../images/logo/logo_plain.png'/>
+            <img id='header_logo' alt='company logo' src='../../images/logo/logo_plain.png'/>
         </div>
         <div id='head_wrapper_right'>
             <a onclick='switchTheme()' class="btn2 btn-animation-four" id='themeSwitchButton' data-sm-link-text="Lightmode" target="_blank"><span>Mode</span></a>
@@ -59,7 +59,7 @@
                     @if (Route::has('login'))
                         <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                             @auth
-                                <a href='' class="dropdown-item w3-bar-item">{{Auth::user()->name}}</a>
+                                <a href="{{ route('user.orders') }}" class="dropdown-item w3-bar-item">{{Auth::user()->name}}</a>
                                 <a href="{{ route('user.kill') }}" class="dropdown-item w3-bar-item">Uitloggen</a>
                                 <form id="logout-form" action="http://localhost/jaar%202/Laravel/project_A/MPA/public/logout" method="POST" class="d-none"><input type="hidden" name="_token" value="sfhh5t43nRlFlqm3umHXxPeF1rQRzScFEwjJ6fE1"></form>
                             @else
@@ -74,7 +74,7 @@
             </div>
         </div>
     </div>
-    
+
     <i class="fas fa-arrow-circle-left" id='back_to_products_button' onclick='window.history.back();'></i>
 
     <div class="w3-content w3-display-container" style="max-width:70vw">
@@ -93,7 +93,7 @@
         </div>
     </div>
     <div id='product_price_wrapper'>
-        <a href='{{Route("product.addToCart", ["id" => $product[0]->id])}}'><h1>{{$product[0]->name}}: €{{$product[0]->price}}</h1></a>
+        <a href='{{Route("product.addToCart", ["id" => $product[0]->id])}}'><h1>{{$product[0]->name}}: €{{$product[0]->price}}</h1><i class="fas fa-cart-plus"></i></a>
     </div>
 
     <div id='product_info_wrapper'>
@@ -120,5 +120,5 @@
     <? include '../resources/views/include/general/footer.php'; ?>
     <script src='../../resources/js/ThemeSwitch.js'></script>
     <script src='../../resources/js/SlideLogic.js'></script>
-    <script src='../resources/js/DropDownLogic.js'></script>
+    <script src='../../resources/js/DropDownLogic.js'></script>
 </html>

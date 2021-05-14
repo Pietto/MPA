@@ -90,7 +90,6 @@ a{
 #featured_offer_parent{
     height: 825px;
     width: 100vw;
-    /* background-image: url('../../images/test_image_1.png'); */
     background-image: url('../../images/random/item_15.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -1054,4 +1053,55 @@ svg {
 
 #register_form{
     height: auto;
+}
+
+
+
+
+
+
+
+/* account order history page */
+
+#account_orders_wrapper{
+    width: 100%;
+    padding: 25px;
+    height: auto;
+    background-image: url('../../images/random/mega_background_image.png');
+}
+
+#orders_wrapper{
+    background-color: rgba(0,0,0,.55);
+    backdrop-filter: blur(3px);
+    color: white;
+    width: 650px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.order>a>img{
+    width: 200px;
+    height: auto;
+}
+
+.order img, .product_details{
+    display: inline-block;
+}
+
+.product_details{
+    font-family: montserrat light, sans-serif;
+    margin-left: 25px;
+    font-size: 30px;
+}
+
+.order{
+    border-bottom: 1px solid rgb(229,190,3);
+}
+
+.order a{
+    transition: .2s;
+}
+
+.order a:hover{
+    color: rgb(229,190,3);
 }

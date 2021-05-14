@@ -44,18 +44,42 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>    
 
-    @foreach($orders as $order)
-        @foreach($order->order as $item)
-        
-        {{$item->product['name']}}
+        <div id='account_orders_wrapper'>
+            <div id='orders_wrapper'>
+                <h1>Bestellingen:</h1>
+                @foreach($orders as $order)
+                    <? $totalPrice = 0; ?>
+                    <p>bestellings id: <?= rand(1000, 10000) ?>TRN{{$order->id}}, <br> besteld op: {{$order->created_at}}.</p>
+                    <div class='order' id='order_{{$order->id}}'>
+                        @foreach($order->order as $item)
 
-        @endforeach
-    @endforeach
+                            <?
+                                $productName = str_replace(' ', '', $item->product['name']);
+                                $productName = str_replace('\'', '', $productName);
+                            ?>
 
+                            <? $totalPrice = $item['product_quantity'] * $item->product['price'] ?>
 
+                            <a href='{{Route("product.one", ["id" => $item->product["id"]])}}'><h2>{{$item->product['name']}} ({{$item->product['fullname']}})</h2></a>
+                            <br>
+                            <a href='{{Route("product.one", ["id" => $item->product["id"]])}}'><img alt="{{$item->product['name']}}_product_image" src="../images/products/<?= $productName ?>/<?= $productName ?>_1.jpg"></a>
+                            <div class='product_details'>
+                                <p>{{$item['product_quantity']}}x €{{$item->product['price']}}: €<?= $totalPrice ?></p>
+                            </div>
+                            <?php 
+                                $totalPrice = $totalPrice + $item->product['price'] * $item['product_quantity'];
+                            ?>
+                        @endforeach
+                    <h3>Bestelling totaalprijs: €{{$totalPrice}}</h3>
+                    </div>
+                @endforeach
+            </div>
+        </div>
 
+    <br><br><br><br><br>
     <? include '../resources/views/include/general/footer.php'; ?>
+    <script src='../resources/js/DropDownLogic.js'></script>
 </body>
 </html>

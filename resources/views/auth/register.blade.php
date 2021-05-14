@@ -122,25 +122,6 @@
                 @enderror
             </div>
 
-
-
-
-            <div class="form-group row">
-                <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                <div class="col-md-6">
-                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                    @error('email')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
-                </div>
-            </div>
-
-
-
             <div class="form_row">
                 <i class="fas fa-fingerprint"></i>
                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder='wachtwoord'>
@@ -152,33 +133,27 @@
                 @enderror
             </div>
 
+
+
+
+            <div class="form-group row">
+                <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+
+                <div class="col-md-6">
+                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                </div>
+            </div>
+
+
             <div class="form_row center no_border">
                 <button id='submit_login_button' class='form_submit_buttons' type="submit">
                     <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
                     <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
                     <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
                     </svg>
-                    <span>{{ __('Login') }}</span>
+                    <span>{{ __('Registreren') }}</span>
                 </button>
             </div>
-            <div class="form_row no_border">
-
-                @if (Route::has('password.request'))
-                    <a class="btn btn-link" id='password_forgot_btn' href="{{ route('password.request') }}">
-                        {{ __('Forgot Your Password?') }}
-                    </a>
-                @endif
-            </div>
-
-
-            <!-- <i class="far fa-user"></i>
-            <i class="fas fa-fingerprint"></i> -->
-
-
-
-
-
-
         </form>
     </div>
 </body>

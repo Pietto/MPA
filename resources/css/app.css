@@ -1046,3 +1046,12 @@ svg {
     top: -50px;
     font-family: Montserrat bold, sans-serif;
 }
+
+
+
+
+/* register page */
+
+#register_form{
+    height: auto;
+}

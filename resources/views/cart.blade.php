@@ -64,7 +64,11 @@
                         <input disabled type='number' id='<?= $productName ?>_quantity_input' name='<?= $productName ?>_quantity' min='0' max='50' value="{{$product['quantity']}}">
                         <div>
                             <a href='{{Route("product.addToCart", ["id" => $product["item"]["id"]])}}'><i id='cart_quantity_arrow_up' class="cart_quantity_arrows fas fa-arrow-up"></i></a>
+                            @if($product['quantity'] == 1)
+                            <a href='{{Route("product.delete", ["id" => $product["item"]["id"]])}}'><i id='cart_quantity_arrow_down' class="cart_quantity_arrows fas fa-arrow-down"></i></a>
+                            @else
                             <a href='{{Route("product.subtractFromCart", ["id" => $product["item"]["id"]])}}'><i id='cart_quantity_arrow_down' class="cart_quantity_arrows fas fa-arrow-down"></i></a>
+                            @endif
                         </div>
                     </div>
                     <div id='cart_trash_price_wrapper'>
@@ -103,20 +107,7 @@
             @endif
             </div>
         @endif
-
-    <div class="button5">
-        @if(Auth::check() && $products != null) 
-        <a href="{{ route('cart.order')}}">a</a>
-            <button action="{{ route('cart.order')}}">order</button>
-        @elseif(Auth::check())
-            <button disabled>order</button>
-        @else
-            <a href="#" class="btn">U moet eerst inloggen:</a>
-            <button disabled>order</button>
-        @endif
-    </div>
     <? include '../resources/views/include/general/footer.php'; ?>
     <script src='../resources/js/DropDownLogic.js'></script>
-
 </body>
 </html>

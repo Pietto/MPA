@@ -44,7 +44,6 @@ class CartController Extends Controller
     }
 
     public function subtract(Request $request, $id){
-        $empty;
         $product = Product::find($id);
         $cart = new Cart();
         $cart->subtractProducts($product, $id, $request);
@@ -54,14 +53,13 @@ class CartController Extends Controller
     public function checkout(){
         // confirm an order
         $order = new UserOrder();
-        Auth::user()->UserOrder()->save($order);           // authenticate to what user this order belongs and assigns the order to this user
-        
-        // send cart to DB
+        // authenticate to what user this order belongs and assigns the order to this user
+        Auth::user()->UserOrder()->save($order);
+        // export cart to the database
         $cart = new Cart();
         $cart->checkout($cart);
-
-        // Wipe the cart
+        // Empty the cart for obvious reasons
         $cart->forget();
-        return redirect()->route('home');
+        return redirect()->back();
     }
 }

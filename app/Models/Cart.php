@@ -62,17 +62,14 @@ class Cart
         if(array_key_exists($id, $this->items)){
             $currentItem = $this->items[$id];
         }
-        
-        if($currentItem['quantity'] <= 1){
-        }else{
-            $currentItem['quantity']--;
-            $currentItem['price'] = $currentItem['quantity'] * $item->price;
-            $this->items[$id] = $currentItem;
-            $this->totalQuantity--;
-            $this->totalPrice -= $item->price;
-    
-            $request->session()->put('cart', $this);
-        }
+
+        $currentItem['quantity']--;
+        $currentItem['price'] = $currentItem['quantity'] * $item->price;
+        $this->items[$id] = $currentItem;
+        $this->totalQuantity--;
+        $this->totalPrice -= $item->price;
+
+        $request->session()->put('cart', $this);
     }
 
     public function checkout($cart){

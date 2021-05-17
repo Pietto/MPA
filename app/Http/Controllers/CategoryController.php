@@ -26,7 +26,8 @@ class CategoryController Extends Controller
     }
 
     /** function GetOneCategory($id) redirects to a view with all products of a specific category
-     *  param $id is the given id of the category that has been selected
+     *  @param $id is the given id of the category that has been selected
+     * 
      *  $categories picks up the selected category, using the Category controller
      *  $product_ID plucks all id's of the products that are in that category, using the ProductCategory controller
      *  $products are all the products with the id's matching the $product_ID, using the product controller

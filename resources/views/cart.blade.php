@@ -65,9 +65,9 @@
                         <div>
                             <a href='{{Route("product.addToCart", ["id" => $product["item"]["id"]])}}'><i id='cart_quantity_arrow_up' class="cart_quantity_arrows fas fa-arrow-up"></i></a>
                             @if($product['quantity'] == 1)
-                            <a href='{{Route("product.delete", ["id" => $product["item"]["id"]])}}'><i id='cart_quantity_arrow_down' class="cart_quantity_arrows fas fa-arrow-down"></i></a>
+                                <a href='{{Route("product.delete", ["id" => $product["item"]["id"]])}}'><i id='cart_quantity_arrow_down' class="cart_quantity_arrows fas fa-arrow-down"></i></a>
                             @else
-                            <a href='{{Route("product.subtractFromCart", ["id" => $product["item"]["id"]])}}'><i id='cart_quantity_arrow_down' class="cart_quantity_arrows fas fa-arrow-down"></i></a>
+                                <a href='{{Route("product.subtractFromCart", ["id" => $product["item"]["id"]])}}'><i id='cart_quantity_arrow_down' class="cart_quantity_arrows fas fa-arrow-down"></i></a>
                             @endif
                         </div>
                     </div>
@@ -93,9 +93,6 @@
                 <p>Bestelling afronden: € <?= $totalPrice ?>.</p>
                 <i class="fas fa-credit-card"></i>
             </a>
-
-
-
         </div>
         @else
             <div class='cart_main_wrapper' id='noBackgroundImage'>

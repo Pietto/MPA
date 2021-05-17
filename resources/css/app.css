@@ -967,13 +967,17 @@ a{
 
 .account_forms{
     background-color: transparent;
-    height: 600px;
+    height: 650px;
     width: 400px;
     margin: 0 auto;
     padding: 25px;
     background-color: rgba(0,0,0,.55);
     backdrop-filter: blur(3px);
     color: white;
+}
+
+.form_row>p>a{
+    text-decoration: underline;
 }
 
 .form_row input{

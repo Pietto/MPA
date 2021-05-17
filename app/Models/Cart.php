@@ -25,9 +25,10 @@ class Cart
     }
 
     /** function addProducts adds a product to the cart
-     *  param $item is the product that needs to be added to the cart
-     *  param $id is the items id 
-     *  param $request?
+     *  @param $item is the product that needs to be added to the cart
+     *  @param $id is the items id 
+     *  @param $request?
+     * 
      *  $categoryID is the categories that match the product
      *  $category is the category that matches the product
      *  $currentItem makes the array, in case this product isnt in the cart yet
@@ -55,11 +56,10 @@ class Cart
         $request->session()->put('cart', $this);
     }
 
-
         /**
          * function remove() removes items from the cart
-         * param $id is the id of the item that needs to be removed
-         * param $cart is the entire current cart
+         * @param $id is the id of the item that needs to be removed
+         * @param $cart is the entire current cart
          * 
          * the cart gets put in the session
          * the total price and quantity gets lowered
@@ -74,7 +74,8 @@ class Cart
 
     /**
      * function removeAll() remnoves all items from the cart
-     * param $cart is the entire cart
+     * @param $cart is the entire cart
+     * 
      * first, we put the cart in the session
      * the total price and quantity getlowered to 0
      * all items are removed from the cart
@@ -88,9 +89,10 @@ class Cart
 
     /**
      * function subtractProducts() removes one amount of an item from the cart
-     * param $item is the item we are handling
-     * param $id is the items id we are handling
-     * param $request?
+     * @param $item is the item we are handling
+     * @param $id is the items id we are handling
+     * @param $request?
+     * 
      * $categoryID is the categories that match the product
      * $category is the category that matches the product
      * array $currentItem is defined.
@@ -121,7 +123,8 @@ class Cart
 
     /**
      * function checkout() completes the order. in a real scenario the payment would take place here, but this is ofcourse not an actual site, so we just push the order to the DB
-     * param $cart is the entire cart we want to push to the DB
+     * @param $cart is the entire cart we want to push to the DB
+     * 
      * first, we create a new Order using the Order Controller
      * after that, we define the orders data.
      * lastly, we save the data so we can call this back later 

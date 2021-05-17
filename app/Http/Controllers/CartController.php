@@ -27,7 +27,8 @@ class CartController Extends Controller
     }
 
     /* this function adds items to the cart
-     * param $id is the target id, defined at the onclick of an <img> or <a>
+     * @param $id is the target id, defined at the onclick of an <img> or <a>
+     * 
      * Product::find($id); finds the target product
      * making a new Cart is necessary
      * $cart->addProducts($params); defines all logic
@@ -41,7 +42,8 @@ class CartController Extends Controller
     }
 
     /* this function deletes items from the cart. this can be done in the cart.blade.php by clicking the trash icon, or reducing a product amount < 1
-     * param $id is the target id
+     * @param $id is the target id
+     * 
      * as always a new cart will be made
      * $cart->remove($params); defines all logic
      * after the product is deleted from the cart, a redirect to the last page (cart.blade.php) will take place
@@ -65,7 +67,8 @@ class CartController Extends Controller
     }
 
     /* this function subracts one item from the cart, chosen by the user. (basically a reverse addToCart function)
-     * param $id is the target id
+     * @param $id is the target id
+     * 
      * as always a new cart will be made
      * $cart->subtractProducts($params); defines all logic
      * after the product is subtracted from the cart, a redirect to the last page (cart.blade.php) will take place

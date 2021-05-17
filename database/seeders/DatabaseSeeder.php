@@ -515,7 +515,7 @@ class DatabaseSeeder extends Seeder
                 'variant' => 'Materieel 1957 Benelux',
                 'topspeed' => 140,
                 'weight' => 115,
-                'voltage' => '1.5kV',
+                'voltage' => '1.5kV, 3kV',
                 'traction' => 'electric',
                 'system' => 'ATB-EG, MEMOR',
                 'length' => 50,

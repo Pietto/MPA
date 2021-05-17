@@ -25,7 +25,8 @@ class ProductController Extends Controller
     }
 
     /** this function returns a view of a specific product.
-     *  param $id is the corresponding id of the item clicked 
+     *  @param $id is the corresponding id of the item clicked 
+     * 
      *  $product is an array of the object, which has a matching id of the clicked item
      */
     function getOneProduct($id){

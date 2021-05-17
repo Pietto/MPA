@@ -49,7 +49,13 @@
         <div id='account_orders_wrapper'>
             <div id='orders_wrapper'>
                 <h1>Bestellingen:</h1>
+                <? $totalCartPrice = 0;?>
+
+                <? $text = 'er zijn (nog) geen bestellingen'; ?>
+
                 @foreach($orders as $order)
+                    <? $text = '' ?>
+
                     <p>bestellings id: <?= rand(1000, 10000) ?>TRN{{$order->id}}, <br> besteld op: {{$order->created_at}}.</p>
                     <div class='order' id='order_{{$order->id}}'>
                         @foreach($order->order as $item)
@@ -66,15 +72,17 @@
                             <br>
                             <a href='{{Route("product.one", ["id" => $item->product["id"]])}}'><img alt="{{$item->product['name']}}_product_image" src="../images/products/<?= $productName ?>/<?= $productName ?>_1.jpg"></a>
                             <div class='product_details'>
-                                <p>{{$item['product_quantity']}}x €{{$item->product['price']}}: €<?= $totalPrice ?></p>
+                                <p>{{$item['product_quantity']}}x €{{$item->product['price']}}: €<?= round($totalPrice, 2) ?></p>
                             </div>
                             <?php 
                                 $totalPrice = $item->product['price'] * $item['product_quantity'];
+                                $totalCartPrice +=$totalPrice;
                             ?>
                         @endforeach
-                    <h3>Bestelling totaalprijs: €{{$totalPrice}}</h3>
+                    <h3>Bestelling totaalprijs: €{{round($totalCartPrice, 2)}}</h3>
                     </div>
                 @endforeach
+                <p>{{$text}}</p>
             </div>
         </div>
 

@@ -11,6 +11,23 @@
     <title>Train Shop - login</title>
 </head>
 <body>
+
+    <div id='header_wrapper'>
+        <div id='head_wrapper_left'>
+            <a href='/jaar%202/Laravel/project_A/MPA/public/'>home</a>
+            <a>about</a>
+            <a href='{{Route("product.all")}}'>products</a>
+            <a href='{{Route("category.all")}}'>categories</a>
+        </div>
+        <div id='head_wrapper_center'>
+            <img id='header_logo' alt='company logo' src='../images/logo/logo_plain.png'/>
+        </div>
+        <div id='head_wrapper_right'>
+            <a onclick='switchTheme()' class="btn2 btn-animation-four" id='themeSwitchButton' data-sm-link-text="Lightmode" target="_blank"><span>Mode</span></a>
+            <a href='{{Route("product.shoppingCart")}}'>cart</a>
+        </div>
+    </div>   
+
     <div class='form_wrapper'>
         <form id='register_form' class='account_forms' method="POST" action="{{ route('register') }}">
             @csrf
@@ -60,6 +77,10 @@
                 <i class="fas fa-fingerprint"></i>
                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder='wachtwoord herhalen'>
             </div>
+            <div class="form_row no_border">
+                <p> al een account? <a href="{{ route('login') }}">inloggen</a></p>
+            </div>
+
 
 
             <div class="form_row center no_border">

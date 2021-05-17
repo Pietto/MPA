@@ -9,6 +9,13 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Http\Request;
 use Session;
 
+/**
+ * the User model handles everything user related
+ * most function are default laravel functions for the login/register system, don't touch it.
+ * function deleteSession() deletes the session when asked to do so
+ * ^ this function isn't in use in the final version
+ */
+
 class User extends Authenticatable
 {
     use HasFactory, Notifiable;

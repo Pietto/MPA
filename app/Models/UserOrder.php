@@ -7,6 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 use Auth;
 
+/**
+ * this functino just returns 2 views, and makes sure table 'user_order' doesn't get renamed by laravel magic
+ */
+
 class UserOrder extends Model
 {
     use HasFactory;

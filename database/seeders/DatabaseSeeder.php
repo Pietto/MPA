@@ -5,6 +5,17 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
+/**
+ * seeders plant data in the tables.
+ * normally you would different files for the seeders, but for simplicity all tables are filled in this one file.
+ * 
+ * running all migrations and seeders needs the following steps:
+ * open commmand prompt (in visual studio code: ctrl + ~)
+ * make sure the CD is in the 'MPA' file
+ * type: php artisan migrate:fresh --seed
+ * hit enter to run
+ */
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -459,7 +470,7 @@ class DatabaseSeeder extends Seeder
                 'length' => 26,
                 'coaches' => 1,
                 'price' => '1199.99',
-                'description' => 'Your bones don\'t break, mine do. That\'s clear. We swallow it too fast, we choke.',
+                'description' => 'Deze rijtuigen zorgen voor een flexibele opstelling van uw trein. Ze zijn compitabel met de ns 1700, ns 6400 en de TRAXX. Omdat deze rijtuigen overal op het nederlandse spoor, EN op buitlenlandse netwerken zijn toegestaan, zijn dit de ideale rijtuigen voor uw trein.',
                 'seats' => 80,
                 'manufacturer' => 'Talbot',
                 'fullname' => 'Intercityrijtuig',
@@ -476,7 +487,7 @@ class DatabaseSeeder extends Seeder
                 'length' => 26,
                 'coaches' => 1,
                 'price' => '1299.99',
-                'description' => 'Your bones don\'t break, mine do. That\'s clear. We swallow it too fast, we choke.',
+                'description' => 'Een aantal ICR-binnenland-rijtuigen is verbouwd tot stuurstandrijtuig, ofwel een rijtuig met een cabine voor de machinist. Deze nieuwe stuurstandrijtuigen zijn uiterlijk grotendeels gelijk aan de Benelux-stuurstandrijtuigen, maar er zijn enkele belangrijke technische verschillen. Deze stuurstanden zijn bijvoorbeeld geschikt gemaakt voor inzet in combinatie met 1700-locomotieven. Voorts zit de machinist niet links, maar in het midden, en de stuurstand is daarom te herkennen aan het ontbreken van een middenstijl in de voorruit.',
                 'seats' => 80,
                 'manufacturer' => 'Talbot',
                 'fullname' => 'Intercity stuurstandrijtuig',
@@ -493,7 +504,7 @@ class DatabaseSeeder extends Seeder
                 'length' => 99,
                 'coaches' => 4,
                 'price' => '1399.99',
-                'description' => 'Your bones don\'t break, mine do. That\'s clear. We swallow it too fast, we choke.',
+                'description' => 'Materieel \'54 (Mat \'54) was een serie twee- en vierdelige elektrische treinstellen van de Nederlandse Spoorwegen, vernoemd naar het jaar waarin de eerste bestelling is geplaatst. Vanwege de kenmerkende vorm van de neus werden ze (hoewel niet officieel) vaak aangeduid als Hondekop.',
                 'seats' => 280,
                 'manufacturer' => 'Allan, Beijnes, Werkspoor',
                 'fullname' => 'Materieel \'54',
@@ -510,7 +521,7 @@ class DatabaseSeeder extends Seeder
                 'length' => 50,
                 'coaches' => 2,
                 'price' => '1499.99',
-                'description' => 'Your bones don\'t break, mine do. That\'s clear. We swallow it too fast, we choke.',
+                'description' => 'De bouwserie Materieel \'57 (Mat \'57) zijn tweedelige treinstellen (ElD2) van het type materieel \'54, Plan Q. Hiervan werden 12 stuks besteld welke werden verdeeld over de NS en de NMBS. De NS kreeg 8 treinstellen en de NMBS 4.',
                 'seats' => 119,
                 'manufacturer' => 'Allan, Beijnes, Werkspoor',
                 'fullname' => 'Materieel \'57',
@@ -527,7 +538,7 @@ class DatabaseSeeder extends Seeder
                 'length' => 18,
                 'coaches' => 0,
                 'price' => '1599.99',
-                'description' => 'Your bones don\'t break, mine do. That\'s clear. We swallow it too fast, we choke.',
+                'description' => 'De NS-locserie 1200 is een elektrische locomotief die tussen 1952 en 1998 werd ingezet door de Nederlandse Spoorwegen, van 1999 tot 2009 werd gebruikt door ACTS Nederland BV en van 2010 tot 2015 bij EETC.',
                 'seats' => 119,
                 'manufacturer' => 'Werkspoor',
                 'fullname' => 'NS 1200',
@@ -544,7 +555,7 @@ class DatabaseSeeder extends Seeder
                 'length' => 153,
                 'coaches' => 6,
                 'price' => '1699.99',
-                'description' => 'Your bones don\'t break, mine do. That\'s clear. We swallow it too fast, we choke.',
+                'description' => 'De DDZ is een serie dubbeldeksmaterieel van de Nederlandse Spoorwegen voor gebruik in intercitydiensten. Ze bestaan uit de stoptreinstellen DD-AR uit de jaren negentig die tussen 2009 en 2014 door NedTrain verbouwd zijn. De projectnaam van deze revisie was DDZ (Dubbeldekker Zonering) waarna de treinen de naam NID (Nieuwe Intercity Dubbeldekker) zouden krijgen. De term DDZ is echter blijven hangen en is nu de gebruikelijke aanduiding voor dit materieel.',
                 'seats' => 119,
                 'manufacturer' => 'NedTrain',
                 'fullname' => 'NS Dubbeldekker Zonering ',
@@ -561,7 +572,7 @@ class DatabaseSeeder extends Seeder
                 'length' => 19,
                 'coaches' => 0,
                 'price' => '1799.99',
-                'description' => 'Your bones don\'t break, mine do. That\'s clear. We swallow it too fast, we choke.',
+                'description' => 'De Siemens Vectron is een locomotiefplatform gebouwd door Siemens. Het moet de voorgaande locomotieffamilies EuroSprinter en de daarvan afgeleide ES 2007 gaan vervangen. Er bestaan verschillende elektrische aangedreven varianten, een diesel- en een dual-mode versie. De naam Smartron wordt gebruikt voor een uitgeklede elektrische uitvoering.',
                 'seats' => 119,
                 'manufacturer' => 'Siemens',
                 'fullname' => 'Siemens Vectron',
@@ -578,7 +589,7 @@ class DatabaseSeeder extends Seeder
                 'length' => 74,
                 'coaches' => 3,
                 'price' => '1899.99',
-                'description' => 'Your bones don\'t break, mine do. That\'s clear. We swallow it too fast, we choke.',
+                'description' => 'Plan U was een type driedelig dieselelektrisch treinstel (officiële aanduiding: DE3) van de Nederlandse Spoorwegen.',
                 'seats' => 119,
                 'manufacturer' => 'Werkspoor',
                 'fullname' => 'Plan U',
@@ -595,17 +606,13 @@ class DatabaseSeeder extends Seeder
                 'length' => 26,
                 'coaches' => 1,
                 'price' => '1999.99',
-                'description' => 'Your bones don\'t break, mine do. That\'s clear. We swallow it too fast, we choke.',
+                'description' => 'Supply Description',
                 'seats' => 80,
                 'manufacturer' => 'Talbot',
                 'fullname' => 'Intercityrijtuig Apmz',
                 'coupling' => 'schoefkoppeling'
             ]
             ]);
-
-
-
-
             DB::table('users')->insert([
                 ['email' => 'admin@admin', 'name' => 'admin', 'password' => bcrypt('admin')]
             ]);

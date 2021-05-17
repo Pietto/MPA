@@ -29,25 +29,6 @@
 
     <div id='products_categories_showcase'>
         <div id='products_categories_wrapper'>
-            <!-- <div id='products_cat_1' class='products_categories_category'>
-                <h1>Intercity</h1>
-                <p>bliep bloep deze zijn snel lol</h1>
-            </div> -->
-            <!-- <script>
-                var category_names = ['locomotief', 'Multiple_Unit', 'sprinter', 'intercity', 'internationaal', 'rijtuigen', 'multysysteem', 'klassiekers'];
-                var category_desc = ['Losse locomotieven', 'Reizigerstreinen met cabine\'s aan voor- en achterkant', 'Sprintertreinen. Licht, snel en gemakelijke in/uit stap', 'Snelle treinen met hoge capaciteit', 'Deze werkpaarden kunnen ook over de grens toeteren', 'Losse rijtuigen voor een variabele opbouw, zonder comfort op te offeren', 'Deze treinen hebben meerdere beveiligingssystemen, ideaal voor over de grens', 'Deze klassiekers hebben hun betrouwbaarheid al bewezen. Nu op naar hun volgende eigenaar'];
-                const categories_amount = 8;
-                for(i=0; i<categories_amount; i++){
-                    document.write(
-                    "<div id='products_cat_" + [i+1] + "' class='products_categories_category' style='background-image= url(`" + '/MPA/images/categories/Multiple_Unit_1.jpg' + "`)'>" +
-                        "<h1>" + category_names[i] + "</h1>" +
-                        "<p>" + category_desc[i] + "</h1>" +
-                    "</div>"
-                    );
-                }
-                // products_cat_1.style.color = 'blue';
-                // console.log([products_cat_1]);
-            </script> -->
             <? foreach($categories as $category){ ?>
                 <a href='{{Route("category.one", ["id" => $category->id])}}'>
                     <div id='category_div_{{$category->id}}' class='products_categories_category' style="background-image: url('../../images/categories/{{$category->name}}_1.jpg');">

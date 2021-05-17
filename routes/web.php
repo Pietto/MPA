@@ -77,7 +77,7 @@ Route::get('/subtractFromCart/{id}', [
 ]);
 
 Route::get('/orderItems', [
-    'uses' => 'App\Http\Controllers\CartController@checkout', 
+    'uses' => 'App\Http\Controllers\ProductOrderController@checkout', 
     'as' => 'cart.order'
 ]);
 

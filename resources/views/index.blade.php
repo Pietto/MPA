@@ -146,7 +146,5 @@
 
 
     <script src='../resources/js/DropDownLogic.js'></script>
-    
-
 </body>
 </html>

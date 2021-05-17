@@ -30,8 +30,7 @@
 
     <div class='form_wrapper'>
         <form id='register_form' class='account_forms' method="POST" action="{{ route('register') }}">
-            @csrf
-
+        @csrf
             <img src='../images/testLogo.png' alt='logo'/>
 
             <div class="form_row">
@@ -45,7 +44,7 @@
                 @enderror
             </div>
 
-            
+
             <div class="form_row">
             <i class="far fa-envelope"></i>
                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder='emailadres'>

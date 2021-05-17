@@ -35,7 +35,7 @@ class CartController Extends Controller
      * after the product is added to the cart, a redirect to the last page will take place
     **/
     public function store(Request $request, $id){
-        $product = Product::find($id);                                                  
+        $product = Product::find($id);
         $cart = new Cart();
         $cart->addProducts($product, $id, $request);
         return redirect()->back();
@@ -78,20 +78,6 @@ class CartController Extends Controller
         $product = Product::find($id);
         $cart = new Cart();
         $cart->subtractProducts($product, $id, $request);
-        return redirect()->back();
-    }
-
-    // this function completes your order after ordering the cart
-    public function checkout(){
-        // confirm an order
-        $order = new UserOrder();
-        // authenticate to what user this order belongs and assigns the order to this user
-        Auth::user()->UserOrder()->save($order);
-        // export cart to the database
-        $cart = new Cart();
-        $cart->checkout($cart);
-        // Empty the cart for obvious reasons
-        $cart->forget();
         return redirect()->back();
     }
 }

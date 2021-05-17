@@ -121,25 +121,6 @@ class Cart
         $request->session()->put('cart', $this);
     }
 
-    /**
-     * function checkout() completes the order. in a real scenario the payment would take place here, but this is ofcourse not an actual site, so we just push the order to the DB
-     * @param $cart is the entire cart we want to push to the DB
-     * 
-     * first, we create a new Order using the Order Controller
-     * after that, we define the orders data.
-     * lastly, we save the data so we can call this back later 
-     */
-    public function checkout($cart){
-        foreach($cart->items as $product){
-            $productorder = new Order();
-            $productorder->product_ID = $product['item']['id'];
-            $productorder->product_quantity = $product['quantity'];
-            $productorder->order_ID = UserOrder::orderBy('id', 'desc')->value('id');
-            $productorder->user_ID = Auth::user()->UserOrder()->value('user_ID');
-            $productorder->save();
-        }
-    }
-
     // function forget() deletes the cart. this function isnt in use in the final version
     public function forget(){
         Session::forget('cart');

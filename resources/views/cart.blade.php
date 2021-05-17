@@ -106,5 +106,8 @@
         @endif
     <? include '../resources/views/include/general/footer.php'; ?>
     <script src='../resources/js/DropDownLogic.js'></script>
+
+
+
 </body>
 </html>
